@@ -16,7 +16,7 @@ const Statistics: React.FC<IArticleArr> = ({ articles }) => {
       <FeaturedPosts>
         <StatsTitle>Featured posts</StatsTitle>
         {articles?.slice(0, 2).map((article) => (
-          <FeaturedPostCard article={article} />
+          <FeaturedPostCard key={article.slug} article={article} />
         ))}
       </FeaturedPosts>
 

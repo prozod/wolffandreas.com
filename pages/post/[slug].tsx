@@ -30,13 +30,7 @@ const Post: React.FC<IStrapi> = ({ articles, categories }) => {
         <title>{articles.title} | TOUX.io</title>
         <meta name="description" content={articles.content} />
       </Head>
-      <PostWrapper
-        title={articles.title}
-        content={articles.content}
-        author={articles.author}
-        publishdate={articles.published_at}
-        category={articles.category}
-      />
+      <PostWrapper article={articles} />
       <Footer />
     </Wrapper100>
   );

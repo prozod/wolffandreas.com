@@ -32,6 +32,7 @@ export const Content = styled.p`
   span {
     line-height: 5px;
     margin-right: 5px;
+    width: fit-content;
   }
 `;
 

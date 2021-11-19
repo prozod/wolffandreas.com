@@ -10,42 +10,22 @@ import {
   Anchor,
 } from "./navigation.styles";
 import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
+import { NavigationLinks } from "@/constants/navigationlinks";
 
 const Navigation = () => {
   return (
     <Wrapper>
       <NavContainer>
         <NavItems>
-          <NavItem>
-            <Link href="/" passHref>
-              <Anchor>Home</Anchor>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/" passHref>
-              <Anchor>About</Anchor>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/" passHref>
-              <Anchor>Work</Anchor>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/blog" passHref>
-              <Anchor>Blog</Anchor>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/" passHref>
-              <Anchor>Music</Anchor>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/" passHref>
-              <Anchor>Contact</Anchor>
-            </Link>
-          </NavItem>
+          {NavigationLinks.map((item, idx) => {
+            return (
+              <NavItem key={idx}>
+                <Link href={item.path} passHref>
+                  <Anchor>{item.title}</Anchor>
+                </Link>
+              </NavItem>
+            );
+          })}
         </NavItems>
 
         <NavIcons>

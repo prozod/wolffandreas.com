@@ -16,8 +16,11 @@ import { duotoneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import rehypeRaw from "rehype-raw";
 import Moment from "react-moment";
 import { PostCategory } from "../card/card.styles";
+import { IArticle } from "@/interfaces/interfaces";
 
-const PostWrapper = ({ title, content, author, publishdate, category }) => {
+const PostWrapper: React.FC<IArticle> = ({ article }) => {
+  const { title, content, author, published_at, category } = article;
+
   return (
     <Wrapper80>
       <PostContent>
@@ -36,7 +39,7 @@ const PostWrapper = ({ title, content, author, publishdate, category }) => {
             <PostAuthor>{author.name}</PostAuthor>
             <span>|</span>
             <PostDate>
-              <Moment format="MMMM Do YYYY">{publishdate}</Moment>
+              <Moment format="MMMM Do YYYY">{published_at}</Moment>
             </PostDate>
           </AuthorWrapper>
         </Header>

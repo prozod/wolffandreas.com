@@ -6,6 +6,10 @@ export const Wrapper80 = styled.div`
   width: 80%;
   min-height: 100vh;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const Wrapper100 = styled.div`

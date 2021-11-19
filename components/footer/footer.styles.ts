@@ -18,6 +18,7 @@ export const FooterLinks = styled.div`
 export const FooterItem = styled.div`
   margin-right: 10px;
   font-size: 0.75rem;
+  width: fit-content;
 
   a {
     color: #8273af;
@@ -26,6 +27,10 @@ export const FooterItem = styled.div`
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 5px;
   }
 `;
 
@@ -36,4 +41,6 @@ export const FooterInfo = styled.div`
 
 export const Copyright = styled.p`
   color: #8273af;
+  margin: 0;
+  padding: 0;
 `;

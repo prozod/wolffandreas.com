@@ -4,11 +4,12 @@ export const FPostCard = styled.div`
   display: flex;
   background: #201b2f;
   border-radius: 10px;
-  color: #fff;
+  color: white;
   transition: all 0.2s ease;
   backface-visibility: hidden;
   transform: translateZ(0);
   margin: 0.5em 0;
+  max-height: 120px;
 `;
 
 export const FPostBody = styled.div`
@@ -34,14 +35,13 @@ export const FPostImg = styled.div`
   width: 100px;
   height: 120px;
   border-radius: 10px 0 0 10px;
-  background: red;
 
   img {
     background-position: center;
     object-fit: cover;
     border-radius: 10px 0 0 10px;
-    height: 100%;
-    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 `;
 

@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavContainer = styled.nav`

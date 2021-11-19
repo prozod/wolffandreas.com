@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-export const PostContent = styled.section`
-  width: 100%;
-  display: flex;
-  color: white;
-  flex-direction: column;
-  font-family: "Comic Sans", sans-serif;
-`;
+export const PostContent = styled.section``;
 
 export const Header = styled.div`
   color: white;
@@ -88,16 +82,4 @@ export const Body = styled.div`
       color: white;
     }
   }
-`;
-
-export const PostCategory = styled.div`
-  padding: 2.5px 7px;
-  background-color: ${(props) => props.color};
-  color: white;
-  width: min-content;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  width: fit-content;
 `;

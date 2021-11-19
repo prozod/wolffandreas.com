@@ -5,10 +5,17 @@ import Navigation from "@/components/navigation/navigation";
 import { Wrapper100 } from "@/constants/basic.styles";
 import { IArticleArr } from "@/interfaces/interfaces";
 import { fetchAPI } from "@/lib/api";
+import MobileNav from "@/components/navigation/mobilenav";
+import { useState } from "react";
+import MobileMenuIcon from "@/components/navigation/mobileMenuIcon";
 
 const Home: React.FC<IArticleArr> = ({ articles }) => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <Wrapper100>
+      <MobileMenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />
+      {showMenu && <MobileNav />}
       <Navigation />
       <Hero />
       <Statistics articles={articles} />

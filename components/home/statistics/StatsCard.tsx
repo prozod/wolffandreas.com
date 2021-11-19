@@ -1,4 +1,3 @@
-import { Articles } from "@/interfaces/interfaces";
 import React from "react";
 import {
   StatsCardWrapper,
@@ -7,7 +6,12 @@ import {
   Title,
 } from "./StatsCard.styles";
 
-const StatsCard: React.FC<Articles> = ({ title, description }) => {
+interface Props {
+  title: string;
+  description: string;
+}
+
+const StatsCard: React.FC<Props> = ({ title, description }) => {
   return (
     <StatsCardWrapper>
       <Title>{title}</Title>
