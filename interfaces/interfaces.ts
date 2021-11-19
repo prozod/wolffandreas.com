@@ -8,6 +8,14 @@ export interface Categories {
   articles?: Articles[];
 }
 
+export interface IArticle {
+  article: Articles;
+}
+
+export interface IArticleArr {
+  articles: Articles[];
+}
+
 export interface Articles {
   id: number;
   author: {

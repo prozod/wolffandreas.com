@@ -1,15 +1,17 @@
-import { IStrapi } from "@/interfaces/interfaces";
-import ReactMarkdown from "react-markdown";
-import Moment from "react-moment";
+import { Articles, IStrapi } from "@/interfaces/interfaces";
 import { fetchAPI } from "@/lib/api";
-import Blog from "@/components/blog/blog";
-import ImageComp from "@/components/images";
-import SEO from "@/components/blog/seo";
+import Head from "next/head";
 import { getStrapiMedia } from "@/lib/media";
 import PostWrapper from "@/components/blog/post/post";
+import { Wrapper100 } from "@/constants/basic.styles";
 import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/footer/footer";
-import { Wrapper100 } from "@/constants/basic.styles";
+
+interface IParams {
+  params: {
+    slug: string;
+  };
+}
 
 const Post: React.FC<IStrapi> = ({ articles, categories }) => {
   const imageUrl = getStrapiMedia(articles.image);
@@ -23,8 +25,11 @@ const Post: React.FC<IStrapi> = ({ articles, categories }) => {
 
   return (
     <Wrapper100>
-      <SEO seo={seo} />
       <Navigation />
+      <Head>
+        <title>{articles.title} | TOUX.io</title>
+        <meta name="description" content={articles.content} />
+      </Head>
       <PostWrapper
         title={articles.title}
         content={articles.content}
@@ -42,7 +47,7 @@ export default Post;
 export async function getStaticPaths() {
   const articles = await fetchAPI("/articles");
   return {
-    paths: articles.map((article) => ({
+    paths: articles.map((article: Articles) => ({
       params: {
         slug: article.slug,
       },
@@ -51,7 +56,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: IParams) {
   const articles = await fetchAPI(`/articles?slug=${params.slug}`);
   const categories = await fetchAPI("/categories");
 

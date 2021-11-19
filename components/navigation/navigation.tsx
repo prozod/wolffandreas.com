@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { Categories } from "@/interfaces/interfaces";
 import {
   Wrapper,
   NavContainer,
@@ -18,32 +17,32 @@ const Navigation = () => {
       <NavContainer>
         <NavItems>
           <NavItem>
-            <Link href="/">
+            <Link href="/" passHref>
               <Anchor>Home</Anchor>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="/">
+            <Link href="/" passHref>
               <Anchor>About</Anchor>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="/">
+            <Link href="/" passHref>
               <Anchor>Work</Anchor>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="/blog">
+            <Link href="/blog" passHref>
               <Anchor>Blog</Anchor>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="/">
+            <Link href="/" passHref>
               <Anchor>Music</Anchor>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="/">
+            <Link href="/" passHref>
               <Anchor>Contact</Anchor>
             </Link>
           </NavItem>

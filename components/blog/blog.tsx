@@ -1,11 +1,11 @@
 import { Articles, Categories, Homepage } from "@/interfaces/interfaces";
 import Posts from "./posts/posts";
 import React, { useState } from "react";
-import Navigation from "../navigation/navigation";
 import { BlogSubtitle, BlogTitle } from "./blog.styles";
 import SearchBar from "./searchbar/searchbar";
-import Footer from "../footer/footer";
 import { Wrapper100 } from "@/constants/basic.styles";
+import Navigation from "../navigation/navigation";
+import Footer from "../footer/footer";
 
 type Props = {
   categories: Categories[];

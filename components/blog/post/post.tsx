@@ -18,8 +18,6 @@ import Moment from "react-moment";
 import { PostCategory } from "../card/card.styles";
 
 const PostWrapper = ({ title, content, author, publishdate, category }) => {
-  console.log(content);
-  console.log(author.picture.url);
   return (
     <Wrapper80>
       <PostContent>
