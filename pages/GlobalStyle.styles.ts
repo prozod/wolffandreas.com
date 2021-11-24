@@ -21,7 +21,11 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
+  transition: all 0.2s ease;
 
+  @media (max-width: 1400px) {
+    width: 80%;
+  }
   
   @media (max-width: 768px) {
     width: 90%;

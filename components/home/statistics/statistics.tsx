@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { IArticleArr } from "@/interfaces/interfaces";
 import FeaturedPostCard from "./FeaturedPostCard";
 import SpotifyCard from "./SpotifyCard";
@@ -7,6 +8,7 @@ import {
   StatsTitle,
   StatsWrapper,
   LiveStatsContainer,
+  CTALink,
 } from "./statistics.style";
 import StatsCard from "./StatsCard";
 
@@ -19,6 +21,9 @@ const Statistics: React.FC<IArticleArr> = ({ scrobble, articles }) => {
         {articles?.slice(0, 2).map((article) => (
           <FeaturedPostCard key={article.slug} article={article} />
         ))}
+        <Link href="/blog" passHref>
+          <CTALink>Read my posts...</CTALink>
+        </Link>
       </FeaturedPosts>
 
       <LiveStats>
@@ -34,6 +39,9 @@ const Statistics: React.FC<IArticleArr> = ({ scrobble, articles }) => {
             description="TypeScript, web performance and web security"
           />
         </LiveStatsContainer>
+        <Link href="/about" passHref>
+          <CTALink>More about me</CTALink>
+        </Link>
       </LiveStats>
     </StatsWrapper>
   );

@@ -14,7 +14,9 @@ export const MobileMenuWrapper = styled.nav`
   padding: 1em 1.5em;
   position: absolute;
   left: 0;
+  z-index: 10;
   /* border-radius: 0 0 10px 10px; */
+
 
   @media (max-width: 768px) {
     display: flex;
@@ -32,6 +34,15 @@ export const MobileNavItem = styled.a`
   padding-left: 15px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #8273af;
+    letter-spacing: 3px;
+  }
+  
 
   &:before {
     content: "";

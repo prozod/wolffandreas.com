@@ -22,7 +22,7 @@ export const StatsTitle = styled.h1`
 export const LiveStats = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1.1;
 
   @media (max-width: 768px) {
     margin-top: 1em;
@@ -45,3 +45,20 @@ export const FeaturedPosts = styled.div`
   margin-right: 10px;
   flex-direction: column;
 `;
+
+export const CTALink = styled.a`
+text-decoration: none;
+color: #9A9A9A;
+margin: 0 auto;
+padding: 8px 12px;
+border-radius: 5px;
+font-size: 0.75rem;
+font-weight: 600;
+transition: all 0.2s ease;
+
+&:hover {
+  cursor: pointer;
+  background: #201b2f;
+  color: #fff;
+}
+`

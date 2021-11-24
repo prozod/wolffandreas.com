@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const MobileMTopWrapper = styled.div`
+@media (max-width: 768px) {
+  margin-top: 3em;
+}
+`
+
 export const Wrapper80 = styled.div`
   display: flex;
   flex: 1;
@@ -18,6 +24,7 @@ export const Wrapper100 = styled.div`
   flex-direction: column;
   margin-top: 0;
   min-height: 100vh;
+
 `;
 
 export const Divider = styled.div`
@@ -40,3 +47,7 @@ export const PageSubtitle = styled.p`
     font-weight: 600;
   }
 `;
+
+export const PageContent = styled.div`
+margin: 1em 0; 
+`

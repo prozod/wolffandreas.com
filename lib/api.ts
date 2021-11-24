@@ -3,6 +3,7 @@ export function getStrapiURL(path = "") {
     }${path}`;
 }
 
+
 export async function fetchAPI(path: string) {
   const requestURL = getStrapiURL(path);
   const response = await fetch(requestURL);

@@ -46,8 +46,9 @@ export const FPostImg = styled.div`
 `;
 
 export const FPostTitle = styled.p`
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
+  margin-bottom: 3px;
 `;
 
 export const FPostDescription = styled.p`

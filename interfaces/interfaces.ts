@@ -1,3 +1,28 @@
+///////////////////////////////////////////////
+// PERSONAL PROJECTS FROM STRAPI 
+///////////////////////////////////////////////
+
+export interface IProjectCard {
+  project: {
+    title: string,
+    technologies: { tech: string[] },
+    image: { url: string },
+    description: string,
+    links: {
+      demo: string,
+      repo: string
+    }
+  }
+}
+
+export interface IProjects {
+  projects: IProjectCard[],
+}
+
+///////////////////////////////////////////////
+// CATEGORIES AND ARTICLES (BLOG)
+///////////////////////////////////////////////
+
 export interface Categories {
   id: number;
   name: string;
@@ -10,25 +35,6 @@ export interface Categories {
 
 export interface IArticle {
   article: Articles;
-}
-
-export interface scrobbleTrack {
-  scrobble: {
-    recenttracks: {
-      track: {
-        "@attr": {
-          nowplaying: string
-        },
-        artist: {
-          "#text": string
-        }
-        name: string
-        attr: {
-          nowplaying: string
-        }
-      }[];
-    }
-  }
 }
 
 export interface IArticleArr extends scrobbleTrack {
@@ -102,3 +108,27 @@ export interface GlobalCtxProps {
     url: string;
   };
 }
+
+///////////////////////////////////////////////
+// SPOTIFY LIVE STATS INTERFACE 
+///////////////////////////////////////////////
+
+export interface scrobbleTrack {
+  scrobble: {
+    recenttracks: {
+      track: {
+        "@attr": {
+          nowplaying: string
+        },
+        artist: {
+          "#text": string
+        }
+        name: string
+        attr: {
+          nowplaying: string
+        }
+      }[];
+    }
+  }
+}
+
