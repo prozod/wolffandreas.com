@@ -12,7 +12,26 @@ export interface IArticle {
   article: Articles;
 }
 
-export interface IArticleArr {
+export interface scrobbleTrack {
+  scrobble: {
+    recenttracks: {
+      track: {
+        "@attr": {
+          nowplaying: string
+        },
+        artist: {
+          "#text": string
+        }
+        name: string
+        attr: {
+          nowplaying: string
+        }
+      }[];
+    }
+  }
+}
+
+export interface IArticleArr extends scrobbleTrack {
   articles: Articles[];
 }
 

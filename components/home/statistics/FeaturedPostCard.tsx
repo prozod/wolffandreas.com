@@ -44,3 +44,4 @@ const FeaturedPostCard: React.FC<IArticle> = ({ article }) => {
 };
 
 export default FeaturedPostCard;
+

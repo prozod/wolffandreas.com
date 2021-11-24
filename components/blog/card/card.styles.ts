@@ -44,6 +44,7 @@ export const PostDescription = styled.p`
   margin: 5px 0;
 `;
 
+
 export const PostCategory = styled.div`
   padding: 2.5px 7px;
   background-color: ${(props) => props.color};

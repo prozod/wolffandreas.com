@@ -7,16 +7,16 @@ import {
   AuthorWrapper,
   PostDate,
 } from "./post.styles";
+import { PostCategory } from "../card/card.styles";
+import { IArticle } from "@/interfaces/interfaces";
 import { Wrapper80, Divider } from "@/constants/basic.styles";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { duotoneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import rehypeRaw from "rehype-raw";
 import Moment from "react-moment";
-import { PostCategory } from "../card/card.styles";
-import { IArticle } from "@/interfaces/interfaces";
+import rehypeRaw from "rehype-raw";
 
 const PostWrapper: React.FC<IArticle> = ({ article }) => {
   const { title, content, author, published_at, category } = article;
@@ -27,8 +27,8 @@ const PostWrapper: React.FC<IArticle> = ({ article }) => {
         <Header>
           <PostTitle>{title}</PostTitle>
           {/* <PostCategory color={`#${category.color}`}>
-            {category.name}
-          </PostCategory> */}
+                              {category.name}
+                              </PostCategory> */}
           <AuthorWrapper>
             <Image
               src={author?.picture.url}

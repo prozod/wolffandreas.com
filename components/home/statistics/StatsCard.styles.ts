@@ -39,3 +39,23 @@ export const Content = styled.p`
 export const CardContent = styled.div`
   display: flex;
 `;
+
+export const Song = styled.div`
+display: flex;
+flex-direction: column;
+margin-left: 5px;
+font-size: 0.75rem;
+font-weight: 600;
+`
+
+export const SongArtist = styled.p`
+color: #fff;
+margin-right: 5px;
+`
+
+
+export const SongName = styled.p`
+  color: #a3a3a3;
+`
+
+

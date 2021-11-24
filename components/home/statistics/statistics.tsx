@@ -10,7 +10,8 @@ import {
 } from "./statistics.style";
 import StatsCard from "./StatsCard";
 
-const Statistics: React.FC<IArticleArr> = ({ articles }) => {
+const Statistics: React.FC<IArticleArr> = ({ scrobble, articles }) => {
+
   return (
     <StatsWrapper>
       <FeaturedPosts>
@@ -23,7 +24,7 @@ const Statistics: React.FC<IArticleArr> = ({ articles }) => {
       <LiveStats>
         <StatsTitle>Live statistcs</StatsTitle>
         <LiveStatsContainer>
-          <SpotifyCard />
+          <SpotifyCard scrobble={scrobble} />
           <StatsCard
             title="Latest project"
             description="Quicktools | Task Tracker"

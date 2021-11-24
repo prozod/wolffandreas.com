@@ -25,3 +25,18 @@ export const Divider = styled.div`
   height: 1px;
   background-color: #6c6093;
 `;
+
+
+export const PageTitle = styled.h1`
+  color: white;
+  font-size: 3rem;
+`;
+
+export const PageSubtitle = styled.p`
+  color: #a3a3a3;
+  margin-top: 0.5em;
+
+  span {
+    font-weight: 600;
+  }
+`;
