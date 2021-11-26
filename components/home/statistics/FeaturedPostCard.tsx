@@ -27,10 +27,10 @@ const FeaturedPostCard: React.FC<IArticle> = ({ article }) => {
         />
       </FPostImg>
       <FPostContent>
-        <Link href={`/post/${slug}`}>
-          <a>
+        <Link href={`/post/${slug}`} passHref>
+          <a aria-label={title || "Featured post"} aria-describedby={title.substr(0, 1)}>
             <FPostBody>
-              <FPostTitle>{title}</FPostTitle>
+              <FPostTitle id={title.substr(0, 1)}>{title}</FPostTitle>
               <FPostDescription>{description}</FPostDescription>
             </FPostBody>
           </a>

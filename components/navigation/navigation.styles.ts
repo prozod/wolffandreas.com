@@ -22,6 +22,8 @@ export const Anchor = styled.a`
   text-decoration: none;
   transition: all 0.15s ease;
 
+  
+
   &:hover {
     color: #a88ff2;
     cursor: pointer;
@@ -36,6 +38,10 @@ export const NavItems = styled.ul`
 
 export const NavItem = styled.li`
   margin-right: 15px;
+
+  [data-active="true"] {
+    color: #a88ff2;
+  }
 `;
 
 export const NavIcons = styled.div`

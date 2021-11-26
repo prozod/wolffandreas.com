@@ -20,9 +20,7 @@ const Hero = () => {
           </HeroText>
         </HeroWrapper>
         <AboutMe>
-          I am a developer, UI/UX enthusiast, and aspiring software engineer.
-          <br />I am also a music producer and as of late, I decided to share my
-          experiences on my blog.
+          I am a web developer, UI/UX designer, aspiring software engineer, music producer and as of late, I started blogging.
         </AboutMe>
       </Header>
     </>

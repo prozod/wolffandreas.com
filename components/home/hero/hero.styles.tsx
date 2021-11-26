@@ -74,7 +74,7 @@ export const AboutMe = styled.p`
   color: white;
   width: 70%;
   margin: 1em 0;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 
   @media (max-width: 768px) {
     width: 100%;

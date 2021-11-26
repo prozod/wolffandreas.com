@@ -24,15 +24,18 @@ const Post: React.FC<IStrapi> = ({ articles, categories }) => {
   };
 
   return (
-    <Wrapper100>
-      <Navigation />
+     <>
       <Head>
         <title>{articles.title} | TOUX.io</title>
         <meta name="description" content={articles.content} />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
+    <Wrapper100>
+      <Navigation />
       <PostWrapper article={articles} />
       <Footer />
     </Wrapper100>
+    </>
   );
 };
 

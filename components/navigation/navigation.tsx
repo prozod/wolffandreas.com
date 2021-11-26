@@ -11,6 +11,7 @@ import {
 } from "./navigation.styles";
 import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 import { NavigationLinks } from "@/constants/navigationlinks";
+import ActiveLink from "./activelink";
 
 const Navigation = () => {
   return (
@@ -20,9 +21,9 @@ const Navigation = () => {
           {NavigationLinks.map((item, idx) => {
             return (
               <NavItem key={idx}>
-                <Link href={item.path} passHref>
+                <ActiveLink href={item.path} passHref>
                   <Anchor>{item.title}</Anchor>
-                </Link>
+                </ActiveLink>
               </NavItem>
             );
           })}
@@ -30,17 +31,17 @@ const Navigation = () => {
 
         <NavIcons>
           <NavIcon>
-            <Anchor>
+            <Anchor href="https://www.linkedin.com/in/andreaswolff96/" aria-label="LinkedIn Page" target="_blank" rel="noreferrer">
               <FaLinkedinIn />
             </Anchor>
           </NavIcon>
           <NavIcon>
-            <Anchor>
+            <Anchor href="https://www.github.com/andreastoux" aria-label="GitHub Page" target="_blank" rel="noreferrer">
               <FaGithub />
             </Anchor>
           </NavIcon>
           <NavIcon>
-            <Anchor>
+            <Anchor href="mailto: andreastx@protonmail.com" aria-label="Email">
               <FaEnvelope />
             </Anchor>
           </NavIcon>
