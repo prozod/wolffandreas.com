@@ -1,3 +1,5 @@
+import { IHomepage } from '@/interfaces/interfaces';
+import Image from 'next/image';
 import {
   HeroTitle,
   Header,
@@ -8,23 +10,26 @@ import {
   HeroWrapper,
 } from "./hero.styles";
 
-const Hero = () => {
+const Hero: React.FC<IHomepage> = ({ info }) => {
+  console.log(info?.profilepicture.url);
   return (
     <>
       <Header>
         <HeroWrapper>
-          <HeroProfilePicture />
+          <HeroProfilePicture>
+            <Image src={info?.profilepicture?.url as any} layout="fill" objectFit="cover" alt='profile picture' loading="lazy" />
+          </HeroProfilePicture>
           <HeroText>
-            <HeroTitle>Aloha! My name is Andreas</HeroTitle>
-            <JobTab>Currently on the hunt for a developer job</JobTab>
+            <HeroTitle>{info?.introline}</HeroTitle>
+            <JobTab>{info?.job}</JobTab>
           </HeroText>
         </HeroWrapper>
-        <AboutMe>
-          I am a web developer, UI/UX designer, aspiring software engineer, music producer and as of late, I started blogging.
-        </AboutMe>
+        <AboutMe>{info?.about}</AboutMe>
       </Header>
     </>
   );
 };
 
 export default Hero;
+
+//            <Image src={} layout="fill" objectFit="cover" alt='profile picture' loading="lazy" />

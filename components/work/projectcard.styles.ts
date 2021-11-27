@@ -6,7 +6,7 @@ export const CardWrapper = styled.div`
   background-color: #201b2f;
   width: 100%;
   position: relative;
-  margin: 0.5em 0;
+  margin: 0.75em 0;
   border-radius: 0 10px 10px 0;
   max-height: 180px;
 
@@ -44,8 +44,11 @@ export const CardContent = styled.div`
 `
 
 export const ProjectImage = styled.div`
-  min-width: 220px;
+  max-width: 220px;
   max-height: 180px; 
+  width: 100%;
+  position: relative;
+
   @media (max-width: 768px) {
     display: none;
   }

@@ -3,6 +3,7 @@
 ///////////////////////////////////////////////
 
 export interface IProjectCard {
+  created_at?: any,
   project: {
     title: string,
     technologies: { tech: string[] },
@@ -37,7 +38,28 @@ export interface IArticle {
   article: Articles;
 }
 
+export interface IHomepage {
+  aboutMe?: {
+    aboutImages: {
+      name: string,
+      url: string
+    }[],
+    besidesthat: string,
+    inthefuture: string,
+    whatido: string
+  }
+  info?: {
+    about: string,
+    introline: string,
+    job: string,
+    profilepicture: {
+      url: string,
+    }
+  }
+}
+
 export interface IArticleArr extends scrobbleTrack {
+  homepage?: IHomepage;
   articles: Articles[];
 }
 

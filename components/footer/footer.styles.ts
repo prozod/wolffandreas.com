@@ -17,7 +17,7 @@ export const FooterLinks = styled.div`
 
 export const FooterItem = styled.div`
   margin-right: 10px;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   width: fit-content;
 
   a {
@@ -36,11 +36,16 @@ export const FooterItem = styled.div`
 
 export const FooterInfo = styled.div`
   display: flex;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 `;
 
 export const Copyright = styled.p`
   color: #8273af;
   margin: 0;
   padding: 0;
+
+  a {
+  text-decoration: none;
+  color: #8273af;
+  }
 `;

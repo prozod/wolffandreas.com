@@ -7,7 +7,6 @@ import {
   CardContent,
   Content,
   Song,
-  SongName,
   SongArtist
 } from "./StatsCard.styles";
 import useSWR from 'swr';
@@ -19,8 +18,6 @@ const SpotifyCard: React.FC<scrobbleTrack> = ({ scrobble }) => {
   let tracks = scrobble?.recenttracks.track.slice(0, 1)
 
   const { data, error } = useSWR(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=10&user=andreaserhard&api_key=${process.env.NEXT_PUBLIC_LASTFM_API_KEY}&format=json`, fetchLastFM)
-  //{ refreshInterval: 1000 }
-  console.log(data, error);
 
   useEffect(() => {
     if (data) {

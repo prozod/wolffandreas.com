@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Head from "next/head"
 import { fetchAPI } from '../lib/api'
 import Footer from "@/components/footer/footer"
 import Navigation from "@/components/navigation/navigation"
@@ -7,13 +8,23 @@ import { MobileMTopWrapper, PageContent, PageSubtitle, PageTitle, Wrapper100 } f
 import MobileNav from '@/components/navigation/mobilenav'
 import MobileMenuIcon from '@/components/navigation/mobileMenuIcon'
 import { IProjects } from '@/interfaces/interfaces'
+import ScrollToTop from '@/components/scroll/scrollToTop'
 
 
 const Work: React.FC<IProjects> = ({ projects }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const sortedProjects = projects.sort((a, b) => {
+    return new Date(a.created_at).valueOf() - new Date(b.created_at).valueOf()
+  });
+
   return (
     <Wrapper100>
+      <Head>
+        <title>My work | TOUX.io</title>
+        <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life" />
+      </Head>
       <Navigation />
+      <ScrollToTop />
       <MobileMenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />
       {showMenu && <MobileNav />}
       <MobileMTopWrapper>
@@ -23,7 +34,7 @@ const Work: React.FC<IProjects> = ({ projects }) => {
           Currently working on: <span>WebRTC Screen-sharing platform</span>
         </PageSubtitle>
         <PageContent>
-          {projects.map((proj: any) => <ProjectCard project={proj} />)}
+          {sortedProjects.map((proj: any) => <ProjectCard project={proj} />)}
         </PageContent>
       </MobileMTopWrapper>
       <Footer />

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Blog from "@/components/blog/blog";
 import { fetchAPI } from "lib/api";
 import { StrapiProps } from "@/interfaces/interfaces";
@@ -7,7 +8,13 @@ import { StrapiProps } from "@/interfaces/interfaces";
 
 const Home: React.FC<StrapiProps> = ({ articles, categories, homepage }) => {
   return (
-    <Blog categories={categories} homepage={homepage} articles={articles} />
+    <>
+      <Head>
+        <title>Blog | TOUX.io</title>
+        <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life" />
+      </Head>
+      <Blog categories={categories} homepage={homepage} articles={articles} />
+    </>
   );
 };
 

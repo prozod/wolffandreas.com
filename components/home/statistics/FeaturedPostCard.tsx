@@ -21,7 +21,7 @@ const FeaturedPostCard: React.FC<IArticle> = ({ article }) => {
           src={image.url}
           alt={image.alternativeText || image.name}
           width={100}
-          height={120}
+          height={140}
           layout="intrinsic"
           loading="lazy"
         />

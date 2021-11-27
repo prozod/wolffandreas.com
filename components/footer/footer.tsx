@@ -30,7 +30,9 @@ const Footer = () => {
         </FooterItem>
       </FooterLinks>
       <FooterInfo>
-        <Copyright>Andreas 'TOUX' Wolff</Copyright>
+        <Copyright>
+          <a href="/">Andreas 'TOUX' Wolff © 2021</a>
+        </Copyright>
       </FooterInfo>
     </FooterWrapper>
   );

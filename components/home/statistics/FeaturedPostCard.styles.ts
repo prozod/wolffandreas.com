@@ -9,7 +9,7 @@ export const FPostCard = styled.div`
   backface-visibility: hidden;
   transform: translateZ(0);
   margin: 0.5em 0;
-  max-height: 120px;
+  max-height: 140px;
 `;
 
 export const FPostBody = styled.div`
@@ -31,9 +31,9 @@ export const FPostContent = styled.div`
 export const FPostImg = styled.div`
   margin: 0;
   min-width: 100px;
-  min-height: 120px;
+  min-height: 140px;
   width: 100px;
-  height: 120px;
+  height: 140px;
   border-radius: 10px 0 0 10px;
 
   img {
@@ -46,12 +46,16 @@ export const FPostImg = styled.div`
 `;
 
 export const FPostTitle = styled.p`
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 3px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const FPostDescription = styled.p`
   color: #a3a3a3;
-  font-size: 0.75rem;
+  font-size: 1rem;
 `;

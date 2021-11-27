@@ -10,7 +10,7 @@ const ProjectCard: React.FC<IProjectCard> = ({ project }) => {
   return (
     <CardWrapper>
       <ProjectImage>
-        <Image src={project.image.url} width={220} height={180} />
+        <Image src={project.image.url} layout="fill" objectFit="cover" />
       </ProjectImage>
       <CardContent>
         <ProjectTitle>{project.title}</ProjectTitle>

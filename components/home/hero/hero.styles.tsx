@@ -21,6 +21,7 @@ export const HeroText = styled.div`
   margin-left: 1em;
   width: 100%;
 
+
   @media (max-width: 768px) {
     margin: 0;
     margin-top: 1em;
@@ -30,6 +31,10 @@ export const HeroText = styled.div`
 export const HeroTitle = styled.h1`
   color: white;
   font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 7px;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -43,7 +48,11 @@ export const HeroProfilePicture = styled.div`
   max-width: 75px;
   max-height: 75px;
   height: 75px;
-  background: #c8deff;
+  position: relative;
+
+  img {
+    border-radius: 50%;
+  }
 
   @media (max-width: 768px) {
     width: 90%;
@@ -65,8 +74,9 @@ export const JobTab = styled.div`
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 600;
-
-  background-color: #f58a9d;
+  position: relative;
+  bottom: 7px;
+  background-color: #ff696e;
 `;
 
 export const AboutMe = styled.p`

@@ -17,13 +17,13 @@ export const SongWrapper = styled.div`
   border-radius: 5px;
 `
 export const SongCredentials = styled.div`
-display: flex;
-flex-direction: column;
-margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
 `
 export const SongTitle = styled.p`
-color: white;
-font-weight: 600;
+  color: white;
+  font-weight: 600;
 `
 
 export const SongArtist = styled.p`
@@ -33,7 +33,6 @@ export const SongArtist = styled.p`
 export const SongImage = styled.div`
   width: 40px;
   height: 40px;
-  background: yellow;
   border-radius: 5px;
   position: relative;
 

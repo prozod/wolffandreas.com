@@ -15,7 +15,7 @@ export const StatsCardWrapper = styled.div`
 
 export const Title = styled.h1`
   color: white;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 5px;
   color: #a3a3a3;
@@ -24,7 +24,7 @@ export const Title = styled.h1`
 export const Content = styled.p`
   color: white;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   margin: 0;
@@ -44,7 +44,7 @@ export const Song = styled.div`
 display: flex;
 flex-direction: column;
 margin-left: 5px;
-font-size: 0.75rem;
+font-size: 1rem;
 font-weight: 600;
 `
 

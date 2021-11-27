@@ -24,7 +24,7 @@ export const Wrapper100 = styled.div`
   flex-direction: column;
   margin-top: 0;
   min-height: 100vh;
-
+  position: relative;
 `;
 
 export const Divider = styled.div`

@@ -6,6 +6,7 @@ import PostWrapper from "@/components/blog/post/post";
 import { Wrapper100 } from "@/constants/basic.styles";
 import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/footer/footer";
+import ScrollToTop from "@/components/scroll/scrollToTop";
 
 interface IParams {
   params: {
@@ -24,17 +25,18 @@ const Post: React.FC<IStrapi> = ({ articles, categories }) => {
   };
 
   return (
-     <>
+    <>
       <Head>
         <title>{articles.title} | TOUX.io</title>
         <meta name="description" content={articles.content} />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-    <Wrapper100>
-      <Navigation />
-      <PostWrapper article={articles} />
-      <Footer />
-    </Wrapper100>
+      <ScrollToTop />
+      <Wrapper100>
+        <Navigation />
+        <PostWrapper article={articles} />
+        <Footer />
+      </Wrapper100>
     </>
   );
 };

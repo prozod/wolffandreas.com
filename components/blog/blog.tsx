@@ -5,6 +5,7 @@ import SearchBar from "./searchbar/searchbar";
 import { PageTitle, PageSubtitle, Wrapper100, MobileMTopWrapper } from "@/constants/basic.styles";
 import Navigation from "../navigation/navigation";
 import Footer from "../footer/footer";
+import ScrollToTop from "../scroll/scrollToTop";
 
 type Props = {
   categories: Categories[];
@@ -30,9 +31,10 @@ const Blog: React.FC<Props> = ({ categories, homepage, articles }) => {
 
   return (
     <Wrapper100>
+      <ScrollToTop />
       <Navigation />
       <MobileMTopWrapper>
-        <PageTitle>{homepage.hero.title}</PageTitle>
+        <PageTitle>Blog</PageTitle>
         <PageSubtitle>
           I've been writing online since 2021, mostly about web development and
           tech careers. <br />

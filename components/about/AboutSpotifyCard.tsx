@@ -14,7 +14,6 @@ interface ITrack {
 }
 
 const AboutSpotifyCard: React.FC<ITrack> = ({ track }) => {
-  console.log(track)
 
   return (
     <SpotifyWrapper>

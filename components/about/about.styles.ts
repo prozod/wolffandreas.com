@@ -19,6 +19,7 @@ export const BannerImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   img {
   border-radius: 10px;
@@ -41,7 +42,7 @@ padding: 0;
 padding-right: 0.5em;
 `
 
-export const ContentInfo = styled.p`
+export const ContentInfo = styled.div`
 display: flex;
 flex-direction: column;
 flex: 3;
@@ -85,6 +86,7 @@ padding: 0.5em;
 export const TrackWrapper = styled.div`
 display: grid;
 grid-template-columns: 50% 50%;
+
 @media (max-width: 768px) {
   grid-template-columns: 1fr;
 }
@@ -134,7 +136,7 @@ overflow: hidden;
   }
 
 &:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0%;
   height: 100%;
