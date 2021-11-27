@@ -28,7 +28,7 @@ const ArrowUp = styled.button<IProps>`
   outline: 2px solid #8273af;
   cursor: pointer;
   opacity: 0;
-  transform: translateY(110%);
+  transform: translateY(130%);
 
   ${({ toggleOpacity }) =>
     toggleOpacity && css`

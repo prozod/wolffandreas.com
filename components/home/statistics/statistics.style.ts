@@ -5,6 +5,10 @@ export const StatsWrapper = styled.section`
   margin-top: 5em;
   margin-bottom: 3em;
 
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+
   @media (max-width: 768px) {
     flex-direction: column;
     margin-top: 1em;

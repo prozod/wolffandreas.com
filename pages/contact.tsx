@@ -48,20 +48,18 @@ const Contact = () => {
           Let's talk!
         </PageTitle>
         <form onSubmit={formik.handleSubmit}>
-          <label for="email" >Your email address</label>
+          <label htmlFor="email" >Your email address</label>
           <input
             id="email"
-            value={formik.values.email}
             {...formik.getFieldProps("email")}
           />
           {formik.touched.email && formik.errors.email ? (
             <ErrorMessage>{formik.errors.email}</ErrorMessage>
           ) : null}
 
-          <label for="message" >Your message</label>
+          <label htmlFor="message" >Your message</label>
           <textarea
             id="message"
-            value={formik.values.message}
             rows={7}
             {...formik.getFieldProps("message")}
           />
