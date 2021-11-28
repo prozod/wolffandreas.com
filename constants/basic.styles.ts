@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MobileMTopWrapper = styled.div`
 @media (max-width: 768px) {
-  margin-top: 3em;
+  margin-top: 4.5em;
 }
 `
 
@@ -15,6 +15,7 @@ export const Wrapper80 = styled.div`
 
   @media (max-width: 768px) {
     margin: 0;
+    width: 100%;
   }
 `;
 
@@ -24,7 +25,11 @@ export const Wrapper100 = styled.div`
   flex-direction: column;
   margin-top: 0;
   min-height: 100vh;
-  position: relative;
+
+  @media (max-width: 768px) {
+    margin: 0;
+    width: 100%;
+  }
 `;
 
 export const Divider = styled.div`
@@ -37,6 +42,10 @@ export const Divider = styled.div`
 export const PageTitle = styled.h1`
   color: white;
   font-size: 3rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const PageSubtitle = styled.p`

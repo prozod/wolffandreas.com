@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
 import { BannerImage, ContentArea, ContentHeader, ContentInfo, ContentParagraph, ContentTitle, CTAButton, CTATitle, CTAWrapper, MusicTitle, MusicWrapper, StatisticsWrapper, TrackWrapper } from "@/components/about/about.styles"
@@ -9,6 +10,8 @@ import { fetchAPI, fetchLastFM } from '@/lib/api'
 import AboutSpotifyCard from '@/components/about/AboutSpotifyCard'
 import ScrollToTop from '@/components/scroll/scrollToTop'
 import { IHomepage } from '@/interfaces/interfaces'
+import MobileMenuIcon from '@/components/navigation/mobileMenuIcon'
+import MobileNav from '@/components/navigation/mobilenav'
 
 interface IProps {
   weeklyTracks: {
@@ -22,7 +25,7 @@ interface IProps {
 const About: React.FC<IProps> = ({ aboutMe, weeklyTracks }) => {
   const tracks = weeklyTracks?.toptracks.track.slice(0, 10);
   const aboutImages = aboutMe.aboutMe!.aboutImages.map((img: { url: string }) => img.url);
-  console.log(aboutParagraphs);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <Wrapper100>
@@ -32,6 +35,8 @@ const About: React.FC<IProps> = ({ aboutMe, weeklyTracks }) => {
       </Head>
       <ScrollToTop />
       <Navigation />
+      <MobileMenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />
+      {showMenu && <MobileNav />}
       <MobileMTopWrapper>
         <PageTitle>Hey, I’m Andreas. I like to take things apart to see why and how they work.</PageTitle>
         <BannerImage height="200px" >
@@ -94,7 +99,9 @@ const About: React.FC<IProps> = ({ aboutMe, weeklyTracks }) => {
         <BannerImage height="200px" padding="4em 0" >
           <CTAWrapper>
             <CTATitle>Let's work!</CTATitle>
-            <CTAButton role="button">hello@toux.io</CTAButton>
+            <a href="mailto: hello@toux.io" aria-label="Email">
+              <CTAButton role="button">hello@toux.io</CTAButton>
+            </a>
           </CTAWrapper>
           <Image alt="abstract black and white image of a building" src={aboutImages[2]} layout="fill" objectFit="cover" loading="lazy" />
         </BannerImage>

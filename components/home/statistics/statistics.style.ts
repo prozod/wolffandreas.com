@@ -48,6 +48,10 @@ export const FeaturedPosts = styled.div`
   flex: 2;
   margin-right: 10px;
   flex-direction: column;
+
+  @media (max-width: 1000px) {
+    margin: 0;
+  }
 `;
 
 export const CTALink = styled.a`

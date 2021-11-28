@@ -33,6 +33,7 @@ const PostWrapper: React.FC<IArticle> = ({ article }) => {
             <Image
               src={author?.picture.url}
               layout="intrinsic"
+              objectFit="cover"
               width={35}
               height={35}
             />

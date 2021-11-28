@@ -6,6 +6,8 @@ import { PageTitle, PageSubtitle, Wrapper100, MobileMTopWrapper } from "@/consta
 import Navigation from "../navigation/navigation";
 import Footer from "../footer/footer";
 import ScrollToTop from "../scroll/scrollToTop";
+import MobileMenuIcon from "../navigation/mobileMenuIcon";
+import MobileNav from "../navigation/mobilenav";
 
 type Props = {
   categories: Categories[];
@@ -15,6 +17,7 @@ type Props = {
 
 const Blog: React.FC<Props> = ({ categories, homepage, articles }) => {
   const [filteredArticles, setFilteredArticles] = useState<Articles[]>([]);
+  const [showMenu, setShowMenu] = useState(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const searchQuery = e.target.value.toLowerCase();
@@ -33,6 +36,8 @@ const Blog: React.FC<Props> = ({ categories, homepage, articles }) => {
     <Wrapper100>
       <ScrollToTop />
       <Navigation />
+      <MobileMenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />
+      {showMenu && <MobileNav />}
       <MobileMTopWrapper>
         <PageTitle>Blog</PageTitle>
         <PageSubtitle>

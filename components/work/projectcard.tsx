@@ -6,7 +6,7 @@ import { IProjectCard } from "@/interfaces/interfaces";
 
 const ProjectCard: React.FC<IProjectCard> = ({ project }) => {
   const technologies = project.technologies.tech.flat().toString().split(",").join(", ")
-  console.log(project);
+
   return (
     <CardWrapper>
       <ProjectImage>

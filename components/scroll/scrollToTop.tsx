@@ -12,8 +12,8 @@ const ScrollWrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 1em;
-  right: 1em;
+  bottom: 1.2em;
+  right: 1.2em;
   z-index: 10;
   width: fit-content;
   height: fit-content;
@@ -67,7 +67,7 @@ const ScrollToTop: React.FC<IProps> = ({ toggleOpacity }) => {
 
   return (
     <ScrollWrapper>
-      <ArrowUp toggleOpacity={isVisible} type='button' onClick={scrollPageToTop}>
+      <ArrowUp toggleOpacity={isVisible} aria-label="Scroll up button" type='button' onClick={scrollPageToTop}>
         <AiOutlineArrowUp size={24} color="white" />
       </ArrowUp>
     </ScrollWrapper>

@@ -9,7 +9,6 @@ export const ContactFormWrapper = styled.section`
   color: white;
 
   form {
-//    background-color: #201B2F;
     display: flex;
     padding: 3em;
     border-radius: 10px;
@@ -19,18 +18,22 @@ export const ContactFormWrapper = styled.section`
     min-width: 300px;
     color: white;
 
+    @media (max-width: 768px) {
+      width: 100vw;
+    }
+
     label {
-  color: #8273af;
-  margin-top: 1em
+    color: #8273af;
+    margin-top: 1em
     }
 
     input {
-      border-radius: 5px;
-      color: white;
-      background: transparent;
-      margin-top: 5px;
-      border: 1px solid #8273af; 
-      padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    background: transparent;
+    margin-top: 5px;
+    border: 1px solid #8273af; 
+    padding: 10px 10px;
     }
 
     textarea {
@@ -82,6 +85,10 @@ a {
   margin: 0 5px;
   padding: 10px 12px;
   border-radius: 5px;
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
 
   &:hover {
     background: #201B2F;

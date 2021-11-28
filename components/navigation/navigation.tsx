@@ -41,7 +41,7 @@ const Navigation = () => {
             </Anchor>
           </NavIcon>
           <NavIcon>
-            <Anchor href="mailto: andreastx@protonmail.com" aria-label="Email">
+            <Anchor href="mailto: hello@toux.io" aria-label="Email">
               <FaEnvelope />
             </Anchor>
           </NavIcon>

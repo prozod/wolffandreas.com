@@ -17,7 +17,6 @@ export const MobileMenuWrapper = styled.nav`
   z-index: 10;
   /* border-radius: 0 0 10px 10px; */
 
-
   @media (max-width: 768px) {
     display: flex;
   }

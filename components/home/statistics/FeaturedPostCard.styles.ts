@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface IPostImage {
+  height?: string,
+  width?: string,
+}
+
 export const FPostCard = styled.div`
   display: flex;
   background: #201b2f;
@@ -9,7 +14,12 @@ export const FPostCard = styled.div`
   backface-visibility: hidden;
   transform: translateZ(0);
   margin: 0.4em 0;
-  max-height: 140px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    max-height: auto;
+    height: 160px;
+  }
 `;
 
 export const FPostBody = styled.div`
@@ -21,6 +31,8 @@ export const FPostContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 1em;
+  margin: 0;
+  width: 100%;
 
   a {
     color: #fff;
@@ -32,9 +44,10 @@ export const FPostImg = styled.div`
   margin: 0;
   min-width: 100px;
   min-height: 140px;
-  width: 100px;
-  height: 140px;
   border-radius: 10px 0 0 10px;
+  position: relative;
+  height: ${(p: IPostImage) => p.height ? p.height : '140px'};
+  width: ${(p: IPostImage) => p.width ? p.width : '100px'};
 
   img {
     background-position: center;
@@ -50,6 +63,10 @@ export const FPostTitle = styled.p`
   font-weight: 600;
   margin-bottom: 3px;
 
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
   &:hover {
     text-decoration: underline;
   }
@@ -58,4 +75,9 @@ export const FPostTitle = styled.p`
 export const FPostDescription = styled.p`
   color: #a3a3a3;
   font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+
 `;

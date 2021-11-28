@@ -1,7 +1,6 @@
 import { Articles, IStrapi } from "@/interfaces/interfaces";
 import { fetchAPI } from "@/lib/api";
 import Head from "next/head";
-import { getStrapiMedia } from "@/lib/media";
 import PostWrapper from "@/components/blog/post/post";
 import { Wrapper100 } from "@/constants/basic.styles";
 import Navigation from "@/components/navigation/navigation";
@@ -15,15 +14,6 @@ interface IParams {
 }
 
 const Post: React.FC<IStrapi> = ({ articles, categories }) => {
-  const imageUrl = getStrapiMedia(articles.image);
-  console.log(articles);
-  const seo = {
-    metaTitle: articles.title,
-    metaDescription: articles.description,
-    shareImage: articles.image,
-    article: true,
-  };
-
   return (
     <>
       <Head>

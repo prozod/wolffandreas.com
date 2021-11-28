@@ -9,10 +9,18 @@ export const FooterWrapper = styled.section`
   padding-top: 1em;
   border-top: 1px solid #201b2f;
   margin-top: auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterLinks = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0.5em;
+  }
 `;
 
 export const FooterItem = styled.div`

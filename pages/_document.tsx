@@ -1,3 +1,4 @@
+import { fetchAPI } from "@/lib/api";
 import Document, { Html, Head, DocumentInitialProps, DocumentContext, NextScript, Main } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
@@ -33,7 +34,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="author" content="Andreas Wolff" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" type="image/svg" href="https://res.cloudinary.com/andreastx/image/upload/v1637954254/txfavicon_uolfv5.svg" />
+          <link rel="icon" type="image/svg" href="https://res.cloudinary.com/andreastx/image/upload/v1638042422/txfavicon_b4673fa7ac.svg" />
           <meta name="keywords" content="nextjs, react, frontend, developer, development, tech, blog, css, html, toux" />
           <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life" />
         </Head>

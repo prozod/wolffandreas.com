@@ -16,8 +16,8 @@ export const CardWrapper = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    max-height: 200px;
-  border-radius: 0 0 10px 10px;
+    max-height: 350px;
+    border-radius: 0 0 10px 10px;
   }
 
   &:before {
@@ -77,6 +77,10 @@ export const ProjectTech = styled.p`
 
 export const ProjectDescription = styled.p`
   color: #a3a3a3;
+  margin-top: 1px;
+  @media (max-width: 768px) {
+    font-size: 0.9rem
+  }
 `
 
 export const ProjectLinks = styled.div`

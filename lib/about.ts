@@ -1,11 +1,12 @@
-export const aboutParagraphs = {
+export const aboutParagraphs =
+{
   whatIdo: {
-    title: "Currently, my focus is targeted towards anything web development.Until now, I have mostly worked on the Frontend, but I am trying to branch out into full-stack.Besides development, I also do UI/UX design.",
-    description: "Amongst the things I’ve had the time & luxury to play around with, I fell the most in love with TypeScript, Firebase, React and its ecosystem, Styled Components, SCSS and two Headless Content Management Systems.I guess I could put that into the JAMStack category.I am also using Figma and Adobe Photoshop on the regular."
+    title: "Currently, my focus is targeted towards anything web development. Until now, I have mostly worked on the Frontend, but I am trying to branch out into full-stack. Besides development, I also do UI/UX design.",
+    description: "Amongst the things I’ve had the time & luxury to play around with, I fell the most in love with TypeScript, Firebase, React and its ecosystem, Styled Components, SCSS and two Headless Content Management Systems. I guess I could put that into the JAMStack category. I am also using Figma and Adobe Photoshop on the regular."
   },
 
   inTheFuture: {
-    title: "I am interested what the future of the web will be, therefore I’m keen to explore new technologies as I progress, one at a time.Will it be Web Assembly? Will it be WASM & Rust ? !Artificial Intelligence?! Who knows!",
+    title: "I am interested what the future of the web will be, therefore I’m keen to explore new technologies as I progress, one at a time. Will it be Web Assembly? Will it be WASM & Rust ? !Artificial Intelligence?! Who knows!",
     description: "Whilst teaching myself web development, I’d lie if I said there haven’t been moments where I just wanted to jump and learn a completely new thing, but you see... I got an entire life ahead of me to learn all of that, so all I need is patience. Some of the things that I am interested in and plan on checking out in the future, besides web & application development, are Cybersecurity & Cloud Computing."
   },
 

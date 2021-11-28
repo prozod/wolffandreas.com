@@ -34,7 +34,7 @@ const Work: React.FC<IProjects> = ({ projects }) => {
           Currently working on: <span>WebRTC Screen-sharing platform</span>
         </PageSubtitle>
         <PageContent>
-          {sortedProjects.map((proj: any) => <ProjectCard project={proj} />)}
+          {sortedProjects.map((proj: any, idx: number) => <ProjectCard key={idx} project={proj} />)}
         </PageContent>
       </MobileMTopWrapper>
       <Footer />

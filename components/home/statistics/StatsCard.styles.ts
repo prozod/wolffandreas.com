@@ -19,6 +19,10 @@ export const Title = styled.h1`
   font-weight: 400;
   margin-bottom: 5px;
   color: #a3a3a3;
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+
 `;
 
 export const Content = styled.p`
@@ -28,6 +32,11 @@ export const Content = styled.p`
   display: flex;
   align-items: center;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+
 
   span {
     line-height: 5px;
@@ -46,6 +55,10 @@ flex-direction: column;
 margin-left: 5px;
 font-size: 1rem;
 font-weight: 600;
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+
 `
 
 export const SongArtist = styled.p`

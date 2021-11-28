@@ -17,8 +17,7 @@ const Statistics: React.FC<IArticleArr> = ({ scrobble, articles }) => {
   return (
     <StatsWrapper>
       <FeaturedPosts>
-        <StatsTitle>Featured posts</StatsTitle>
-        {articles?.slice(0, 2).map((article) => (
+        <StatsTitle>Featured posts</StatsTitle> {articles?.slice(0, 2).map((article) => (
           <FeaturedPostCard key={article.slug} article={article} />
         ))}
         <Link href="/blog" passHref>

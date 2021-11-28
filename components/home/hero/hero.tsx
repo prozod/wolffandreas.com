@@ -11,7 +11,7 @@ import {
 } from "./hero.styles";
 
 const Hero: React.FC<IHomepage> = ({ info }) => {
-  console.log(info?.profilepicture.url);
+
   return (
     <>
       <Header>

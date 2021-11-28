@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const PostContent = styled.section``;
+export const PostContent = styled.section`
+  width: 100%;
+`;
 
 export const Header = styled.div`
   color: white;
@@ -16,6 +18,10 @@ export const PostTitle = styled.h1`
   line-height: 4.5rem;
   letter-spacing: 0px;
   margin: 0.5em 0 0.25em 0;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 export const AuthorWrapper = styled.div`
@@ -42,12 +48,14 @@ export const Body = styled.div`
   padding-bottom: 5em;
 
   .markdown-content {
+    width: 100%;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     font-family: "IBM Plex Sans", sans-serif;
 
     iframe {
       margin: 1em 0;
+      width: 100%;
     }
 
     p {
