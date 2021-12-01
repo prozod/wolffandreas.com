@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
 body {
-  width: 50%;
+  width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   background-color: #110E1B;
@@ -21,15 +21,20 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  transition: all 0.2s ease;
+}
 
-  @media (max-width: 1400px) {
+.AppWrapper {
+    width: 50%;
+    margin: 0 auto;
+    transition: all 0.2s ease;
+
+    @media (max-width: 1400px) {
     width: 80%;
-  }
-  
-  @media (max-width: 768px) {
+    }
+    
+    @media (max-width: 768px) {
     width: 90%;
-  }
+    }
 }
 
 body::-webkit-scrollbar-track

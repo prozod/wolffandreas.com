@@ -21,7 +21,7 @@ const Home: React.FC<IArticleArr> = ({ homepage, scrobble, articles }) => {
         <title>TOUX.io | Developer, blogger, tech enthusiast</title>
         <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life" />
       </Head>
-      <Wrapper100>
+      <Wrapper100 className="AppWrapper">
         <ScrollToTop />
         <MobileMenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />
         {showMenu && <MobileNav />}

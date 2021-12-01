@@ -41,7 +41,7 @@ const Contact = () => {
   });
 
   return (
-    <Wrapper100>
+    <Wrapper100 className="AppWrapper">
       <Head>
         <title>Contact | TOUX.io</title>
         <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life, Music Production" />

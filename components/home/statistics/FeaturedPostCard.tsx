@@ -13,7 +13,6 @@ import { IArticle } from "@/interfaces/interfaces";
 
 const FeaturedPostCard: React.FC<IArticle> = ({ article }) => {
   const { title, description, category, image, slug } = article;
-
   return (
     <FPostCard>
       <FPostImg width="140px" height="150px">

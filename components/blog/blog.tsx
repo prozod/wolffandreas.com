@@ -33,7 +33,7 @@ const Blog: React.FC<Props> = ({ categories, homepage, articles }) => {
   }
 
   return (
-    <Wrapper100>
+    <Wrapper100 className="AppWrapper">
       <ScrollToTop />
       <Navigation />
       <MobileMenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />

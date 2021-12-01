@@ -11,7 +11,7 @@ const Music = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Wrapper100>
+    <Wrapper100 className="AppWrapper">
       <Head>
         <title>Music | TOUX.io</title>
         <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life, Music Production" />

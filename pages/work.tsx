@@ -18,7 +18,7 @@ const Work: React.FC<IProjects> = ({ projects }) => {
   });
 
   return (
-    <Wrapper100>
+    <Wrapper100 className="AppWrapper">
       <Head>
         <title>My work | TOUX.io</title>
         <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life" />
