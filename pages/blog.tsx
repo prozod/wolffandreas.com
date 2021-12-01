@@ -13,7 +13,7 @@ const Home: React.FC<StrapiProps> = ({ articles, categories, homepage }) => {
         <title>Blog | TOUX.io</title>
         <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life" />
       </Head>
-      <Blog className="AppWrapper" categories={categories} homepage={homepage} articles={articles} />
+      <Blog categories={categories} homepage={homepage} articles={articles} />
     </>
   );
 };
