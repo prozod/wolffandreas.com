@@ -21,6 +21,10 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
+    
+    // @media (max-width: 768px) {
+    // width: 90%;
+    // }
 }
 
 .AppWrapper {

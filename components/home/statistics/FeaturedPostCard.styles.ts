@@ -13,7 +13,7 @@ export const FPostCard = styled.div`
   transition: all 0.2s ease;
   backface-visibility: hidden;
   transform: translateZ(0);
-  margin: 0.4em 0;
+  margin: 0.5em 0;
   width: 100%;
 
   @media (max-width: 768px) {

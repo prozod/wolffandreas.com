@@ -26,9 +26,9 @@ export const Wrapper100 = styled.div`
   margin-top: 0;
   min-height: 100vh;
 
-  @media (max-width: 768px) {
-    margin: 0;
-    width: 100%;
+  // @media (max-width: 768px) {
+  //   margin: 0;
+  //   width: 100%;
   }
 `;
 

@@ -53,6 +53,13 @@ export const Body = styled.div`
     letter-spacing: 0.5px;
     font-family: "IBM Plex Sans", sans-serif;
 
+
+    img {
+        width: 100%;
+        border-radius: 5px;
+        margin: 0.5em 0;
+    }
+
     iframe {
       margin: 1em 0;
       width: 100%;
@@ -60,6 +67,32 @@ export const Body = styled.div`
 
     p {
       margin: 1em 0;
+    }
+
+    li { 
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-top: 0.5em;
+    }
+
+    h2 {
+      position: relative;
+      width: fit-content;
+
+      &:after {
+        position: absolute;
+        margin: auto 0;
+        content: "";
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 15px;
+        background-color: #4745b9;
+        z-index: -1;
+      }
     }
 
     h1 {
@@ -85,7 +118,7 @@ export const Body = styled.div`
     a {
       text-decoration: none;
       background-color: #4745b9;
-      padding: 1px;
+      padding: 1px 3px;
       border-radius: 5px;
       color: white;
     }

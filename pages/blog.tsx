@@ -7,6 +7,7 @@ import { StrapiProps } from "@/interfaces/interfaces";
 // if i do Categories[], ill get it as an array but ill be prompeted to add categories props there down in Container
 
 const Home: React.FC<StrapiProps> = ({ articles, categories, homepage }) => {
+    console.log(articles);
   return (
     <>
         <Head>
