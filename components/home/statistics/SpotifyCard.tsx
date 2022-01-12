@@ -1,23 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 import { scrobbleTrack } from "@/interfaces/interfaces";
 import { FaSpotify } from "react-icons/fa";
-import {
-  Title,
-  StatsCardWrapper,
-  CardContent,
-  Content,
-  Song,
-  SongArtist
-} from "./StatsCard.styles";
-import useSWR from 'swr';
-import { fetchLastFM } from '@/lib/api';
+import { Title, StatsCardWrapper, CardContent, Content, Song, SongArtist } from "./StatsCard.styles";
+import useSWR from "swr";
+import { fetchLastFM } from "@/lib/api";
 
 const SpotifyCard: React.FC<scrobbleTrack> = ({ scrobble }) => {
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [song, setSong] = useState({ artist: '', name: '' })
-  let tracks = scrobble?.recenttracks.track.slice(0, 1)
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [song, setSong] = useState({ artist: "", name: "" });
+  let tracks = scrobble?.recenttracks?.track.slice(0, 1);
 
-  const { data, error } = useSWR(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=10&user=andreaserhard&api_key=${process.env.NEXT_PUBLIC_LASTFM_API_KEY}&format=json`, fetchLastFM)
+  const { data, error } = useSWR(
+    `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=10&user=andreaserhard&api_key=${process.env.NEXT_PUBLIC_LASTFM_API_KEY}&format=json`,
+    fetchLastFM
+  );
 
   useEffect(() => {
     if (data) {
@@ -25,20 +21,19 @@ const SpotifyCard: React.FC<scrobbleTrack> = ({ scrobble }) => {
     }
 
     if (error) {
-      setIsPlaying(false)
+      setIsPlaying(false);
     }
 
     tracks?.map((t) => {
-      if (t["@attr"]?.nowplaying === 'true') {
-        setIsPlaying(true)
-        setSong({ artist: t.artist["#text"], name: t.name })
+      if (t["@attr"]?.nowplaying === "true") {
+        setIsPlaying(true);
+        setSong({ artist: t.artist["#text"], name: t.name });
       } else {
-        setIsPlaying(false)
-        setSong({ artist: '', name: '' })
+        setIsPlaying(false);
+        setSong({ artist: "", name: "" });
       }
-    })
-  }, [data])
-
+    });
+  }, [data]);
 
   return (
     <StatsCardWrapper>
@@ -48,18 +43,18 @@ const SpotifyCard: React.FC<scrobbleTrack> = ({ scrobble }) => {
             <FaSpotify color="#1ed760" size={18} />
           </span>
         </Content>
-        {
-          isPlaying ?
-            <Song>
-              < Title > Currently listening to</Title>
-              <SongArtist>
-                {song.artist} - {song.name}
-              </SongArtist>
-            </Song> :
-            <Content>Not playing Spotify</Content>
-        }
+        {isPlaying ? (
+          <Song>
+            <Title> Currently listening to</Title>
+            <SongArtist>
+              {song.artist} - {song.name}
+            </SongArtist>
+          </Song>
+        ) : (
+          <Content>Not playing Spotify</Content>
+        )}
       </CardContent>
-    </StatsCardWrapper >
+    </StatsCardWrapper>
   );
 };
 export default SpotifyCard;

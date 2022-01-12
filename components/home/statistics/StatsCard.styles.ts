@@ -1,3 +1,4 @@
+import { NONAME } from "dns";
 import styled from "styled-components";
 
 export const StatsCardWrapper = styled.div`
@@ -7,10 +8,11 @@ export const StatsCardWrapper = styled.div`
   color: white;
   border-radius: 5px;
   padding: 1em;
+`;
 
-  &:nth-child(2) {
-    margin: 1em 0;
-  }
+export const CTALastProject = styled.a`
+  text-decoration: none;
+  margin: 1em 0;
 `;
 
 export const Title = styled.h1`
@@ -22,7 +24,6 @@ export const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
-
 `;
 
 export const Content = styled.p`
@@ -37,7 +38,6 @@ export const Content = styled.p`
     font-size: 0.9rem;
   }
 
-
   span {
     line-height: 5px;
     margin-right: 5px;
@@ -50,25 +50,21 @@ export const CardContent = styled.div`
 `;
 
 export const Song = styled.div`
-display: flex;
-flex-direction: column;
-margin-left: 5px;
-font-size: 1rem;
-font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: 600;
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
-
-`
+`;
 
 export const SongArtist = styled.p`
-color: #fff;
-margin-right: 5px;
-`
-
+  color: #fff;
+  margin-right: 5px;
+`;
 
 export const SongName = styled.p`
   color: #a3a3a3;
-`
-
-
+`;
