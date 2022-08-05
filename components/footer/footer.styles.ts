@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FooterWrapper = styled.section`
   display: flex;
@@ -7,8 +7,8 @@ export const FooterWrapper = styled.section`
   color: white;
   margin: 3em 0 1em 0;
   padding-top: 1em;
-  border-top: 1px solid #201b2f;
   margin-top: auto;
+  border-top: 1px solid ${({ theme }) => theme.divider};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -29,9 +29,6 @@ export const FooterItem = styled.div`
   width: fit-content;
 
   a {
-    color: #8273af;
-    text-decoration: none;
-
     &:hover {
       text-decoration: underline;
     }
@@ -48,12 +45,10 @@ export const FooterInfo = styled.div`
 `;
 
 export const Copyright = styled.p`
-  color: #8273af;
   margin: 0;
   padding: 0;
 
   a {
-  text-decoration: none;
-  color: #8273af;
+    text-decoration: none;
   }
 `;

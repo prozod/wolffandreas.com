@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface IBannerImg {
   height?: string;
@@ -12,10 +12,10 @@ interface IStyleProps {
 
 export const BannerImage = styled.div`
   width: 100%;
-  height: ${(p: IBannerImg) => p.height || "200px"};
+  height: ${(p: IBannerImg) => p.height || '200px'};
   position: relative;
-  margin: ${(p: IBannerImg) => (p.margin ? p.margin : "40px 0")};
-  padding: ${(p: IBannerImg) => (p.padding ? p.padding : "")};
+  margin: ${(p: IBannerImg) => (p.margin ? p.margin : '40px 0')};
+  padding: ${(p: IBannerImg) => (p.padding ? p.padding : '')};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,8 +35,7 @@ export const ContentArea = styled.section`
 export const ContentTitle = styled.h1`
   display: flex;
   flex: 1;
-  font-size: 2rem;
-  color: white;
+  font-size: 1.75rem;
   margin: 0;
   padding: 0;
   padding-right: 0.5em;
@@ -51,7 +50,6 @@ export const ContentInfo = styled.div`
 `;
 
 export const ContentHeader = styled.p`
-  color: white;
   font-weight: 600;
   margin: 0;
   padding: 0;
@@ -59,10 +57,10 @@ export const ContentHeader = styled.p`
 `;
 
 export const ContentParagraph = styled.p`
-  color: #b5b5b5;
+  color: #777777;
   margin: 0;
   padding: 0;
-  margin-bottom: ${(p: IStyleProps) => (p.mb ? p.mb : "")};
+  margin-bottom: ${(p: IStyleProps) => (p.mb ? p.mb : '')};
 `;
 
 export const MusicWrapper = styled.section`
@@ -71,14 +69,13 @@ export const MusicWrapper = styled.section`
 `;
 
 export const MusicTitle = styled.h1`
-  font-size: 2rem;
-  color: white;
+  font-size: 1.75rem;
   margin-bottom: 40px;
   margin-top: 1em;
 `;
 
 export const StatisticsWrapper = styled.div`
-  background-color: #201b2f;
+  background: ${({ theme }) => theme.background};
   border-radius: 5px;
   padding: 0.5em;
 `;
@@ -135,7 +132,7 @@ export const CTAButton = styled.button`
   }
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0%;
     height: 100%;

@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const CardWrapper = styled.div`
   display: flex;
-  color: #fff;
-  background-color: #201b2f;
+  background: ${({ theme }) => theme.background};
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.05));
+  border: 1px solid rgba(0, 0, 0, 0.05);
   width: 100%;
   position: relative;
   margin: 0.75em 0;
@@ -26,67 +27,68 @@ export const CardWrapper = styled.div`
     height: 100%;
     position: absolute;
     left: 0;
-    background-color: #8360BC;
     z-index: 1;
-    
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 3px;
+    background: ${({ theme }) => theme.accent};
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 3px;
+    }
   }
-  }
-`
+`;
 
 export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.75em 1em;
-`
+`;
 
 export const ProjectImage = styled.div`
   max-width: 220px;
-  max-height: 180px; 
+  max-height: 180px;
   width: 100%;
   position: relative;
 
   @media (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 export const ProjectTitle = styled.h1`
   font-weight: 600;
-  font-size: 1.25rem;
-`
+  font-size: 1rem;
+`;
 
 export const ProjectContentWrapper = styled.div`
-  display: flex; 
+  display: flex;
   flex-direction: column;
   margin: 1em 0;
 
   @media (max-width: 1400px) {
     margin: 0.5em 0;
   }
-`
+`;
 
 export const ProjectTech = styled.p`
   font-weight: 600;
   font-size: 0.75rem;
   text-transform: uppercase;
-`
+`;
 
 export const ProjectDescription = styled.p`
-  color: #a3a3a3;
+  color: ${({ theme }) => theme.text_secondary};
   margin-top: 1px;
+  font-size: 0.75rem;
   @media (max-width: 768px) {
-    font-size: 0.9rem
+    font-size: 0.75rem;
   }
-`
+`;
 
 export const ProjectLinks = styled.div`
   display: flex;
   align-items: center;
-`
+`;
 
 export const ProjectLink = styled.div`
   display: flex;
@@ -95,12 +97,7 @@ export const ProjectLink = styled.div`
   align-items: center;
   margin-right: 15px;
 
-  a {
-  text-decoration: none;
-  color: #fff;
-  }
-
   span {
     margin-right: 5px;
   }
-`
+`;

@@ -1,33 +1,30 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PostContent = styled.section`
   width: 100%;
 `;
 
 export const Header = styled.div`
-  color: white;
-
   img {
     border-radius: 50%;
   }
 `;
 
 export const PostTitle = styled.h1`
-  color: white;
-  font-size: 5rem;
-  line-height: 4.5rem;
-  letter-spacing: 0px;
+  font-size: 3rem;
+  line-height: 4rem;
+  letter-spacing: -2px;
   margin: 0.5em 0 0.25em 0;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 `;
 
 export const AuthorWrapper = styled.div`
   display: flex;
   align-items: center;
-  color: #8273af;
   margin: 1em 0 1.5em 0;
   font-size: 0.75rem;
   font-weight: 600;
@@ -44,20 +41,18 @@ export const PostAuthor = styled.div`
 export const PostDate = styled.p``;
 
 export const Body = styled.div`
-  color: white;
   padding-bottom: 5em;
 
   .markdown-content {
     width: 100%;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
-    font-family: "IBM Plex Sans", sans-serif;
-
+    font-family: 'Inter', sans-serif;
 
     img {
-        width: 100%;
-        border-radius: 5px;
-        margin: 0.5em 0;
+      width: 100%;
+      border-radius: 5px;
+      margin: 0.5em 0;
     }
 
     iframe {
@@ -69,28 +64,29 @@ export const Body = styled.div`
       margin: 1em 0;
     }
 
-    li { 
-        margin: 10px 0;
+    li {
+      margin: 10px 0;
     }
 
     h3 {
-        font-size: 1.5rem;
-        margin-top: 0.5em;
+      font-size: 1.5rem;
+      margin-top: 0.5em;
     }
 
     h2 {
       position: relative;
       width: fit-content;
+      margin-top: 1rem;
 
       &:after {
         position: absolute;
         margin: auto 0;
-        content: "";
+        content: '';
         bottom: -1px;
         left: 0;
         width: 100%;
         height: 15px;
-        background-color: #4745b9;
+        background-color: ${({ theme }) => theme.blogpostsubtitle};
         z-index: -1;
       }
     }
@@ -105,22 +101,22 @@ export const Body = styled.div`
       &:after {
         position: absolute;
         margin: auto 0;
-        content: "";
+        content: '';
         bottom: -1px;
         left: 0;
         width: 100%;
         height: 15px;
-        background-color: #4745b9;
+        background-color: ${({ theme }) => theme.blogpostsubtitle};
         z-index: -1;
       }
     }
 
     a {
       text-decoration: none;
-      background-color: #4745b9;
+      background-color: ${({ theme }) => theme.blogpostsubtitle};
       padding: 1px 3px;
       border-radius: 5px;
-      color: white;
+      color: ${({ theme }) => theme.text};
     }
   }
 `;

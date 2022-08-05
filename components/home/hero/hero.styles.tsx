@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Header = styled.section`
   display: flex;
@@ -7,7 +7,7 @@ export const Header = styled.section`
   padding: 0;
   height: 100%;
   width: 100%;
-  margin-top: 5em;
+  margin-top: 3em;
 
   @media (max-width: 768px) {
     margin-top: 1em;
@@ -20,7 +20,7 @@ export const HeroText = styled.div`
   justify-content: center;
   margin-left: 1em;
   width: 100%;
-
+  position: relative;
 
   @media (max-width: 768px) {
     margin: 0;
@@ -29,12 +29,12 @@ export const HeroText = styled.div`
 `;
 
 export const HeroTitle = styled.h1`
-  color: white;
-  font-size: 3rem;
+  font-size: 1.5rem;
   margin: 0;
   padding: 0;
   position: relative;
   bottom: 7px;
+  font-family: 'Epilogue', sans-serif;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -75,16 +75,17 @@ export const JobTab = styled.div`
   font-size: 0.75rem;
   font-weight: 600;
   position: relative;
-  bottom: 7px;
-  background-color: #ff696e;
+  margin-bottom: 3px;
+  color: ${({ theme }) => theme.body};
+  background-color: ${({ theme }) => theme.accent};
+  transition: all 0.5s linear;
 `;
 
 export const AboutMe = styled.p`
   display: flex;
-  color: white;
-  width: 70%;
   margin: 1em 0;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
+  font-family: 'Lato', sans-serif;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -94,8 +95,23 @@ export const AboutMe = styled.p`
 
 export const HeroWrapper = styled.div`
   display: flex;
+  justify-content: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+`;
+
+export const DateTime = styled.div`
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  display: flex;
+  font-size: 0.8rem;
+  width: fit-content;
+  border-radius: 5px;
+  transition: all 0.25s linear;
+
+  > p {
+    min-height: 22px;
   }
 `;

@@ -1,13 +1,22 @@
-import { useEffect, useState } from "react";
-import { scrobbleTrack } from "@/interfaces/interfaces";
-import { FaSpotify } from "react-icons/fa";
-import { Title, StatsCardWrapper, CardContent, Content, Song, SongArtist } from "./StatsCard.styles";
-import useSWR from "swr";
-import { fetchLastFM } from "@/lib/api";
+import { useEffect, useState } from 'react';
+import { scrobbleTrack } from '@/interfaces/interfaces';
+import { FaSpotify } from 'react-icons/fa';
+import {
+  Title,
+  StatsCardWrapper,
+  CardContent,
+  Content,
+  Song,
+  SongArtist,
+  SongBars,
+} from './StatsCard.styles';
+import useSWR from 'swr';
+import { fetchLastFM } from '@/lib/api';
+import styles from '../../../constants/volume.module.css';
 
 const SpotifyCard: React.FC<scrobbleTrack> = ({ scrobble }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [song, setSong] = useState({ artist: "", name: "" });
+  const [song, setSong] = useState({ artist: '', name: '' });
   let tracks = scrobble?.recenttracks?.track.slice(0, 1);
 
   const { data, error } = useSWR(
@@ -25,12 +34,12 @@ const SpotifyCard: React.FC<scrobbleTrack> = ({ scrobble }) => {
     }
 
     tracks?.map((t) => {
-      if (t["@attr"]?.nowplaying === "true") {
+      if (t['@attr']?.nowplaying === 'true') {
         setIsPlaying(true);
-        setSong({ artist: t.artist["#text"], name: t.name });
+        setSong({ artist: t.artist['#text'], name: t.name });
       } else {
         setIsPlaying(false);
-        setSong({ artist: "", name: "" });
+        setSong({ artist: '', name: '' });
       }
     });
   }, [data]);
@@ -40,13 +49,14 @@ const SpotifyCard: React.FC<scrobbleTrack> = ({ scrobble }) => {
       <CardContent>
         <Content>
           <span>
-            <FaSpotify color="#1ed760" size={18} />
+            <FaSpotify color='#1ed760' size={18} />
           </span>
         </Content>
         {isPlaying ? (
           <Song>
-            <Title> Currently listening to</Title>
+            <Title>Currently listening to</Title>
             <SongArtist>
+              <SongBars></SongBars>
               {song.artist} - {song.name}
             </SongArtist>
           </Song>

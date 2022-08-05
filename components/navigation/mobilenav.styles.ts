@@ -1,21 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
+// transform: translateY(100%) translateX(-100%) scale(0.9);
 export const MobileMenuWrapper = styled.nav`
   display: none;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
-  background-color: #110e1b;
-  color: white;
-  /* border-left: 1px solid #8273af;
-  border-right: 1px solid #8273af; */
-  border-bottom: 5px solid #fff;
-  outline: 5px solid #8273af;
-  padding: 1em 1.5em;
-  position: absolute;
+  align-items: flex-end;
+  transform: translateY(100%);
+  visibility: hidden;
+  height: fit-content;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   left: 0;
-  z-index: 10;
-  /* border-radius: 0 0 10px 10px; */
+  background-color: ${({ theme }) => theme.body};
+  outline: 6px solid ${({ theme }) => theme.accent};
+  padding: 2em;
+  color: ${({ theme }) => theme.text};
+  z-index: 11;
+  transition: all 0.25s ease-in-out;
 
   @media (max-width: 768px) {
     display: flex;
@@ -23,8 +26,8 @@ export const MobileMenuWrapper = styled.nav`
 `;
 
 export const MobileNavItem = styled.a`
-  color: white;
-  font-family: "IBM Plex Sans", sans-serif;
+  color: ${({ theme }) => theme.text};
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
   padding: 10px 10px;
   width: fit-content;
@@ -35,22 +38,23 @@ export const MobileNavItem = styled.a`
   align-items: center;
   cursor: pointer;
   font-weight: 600;
+  font-size: 1rem;
   transition: all 0.2s ease;
 
   &:hover {
-    color: #8273af;
+    color: ${({ theme }) => theme.accent};
     letter-spacing: 3px;
   }
-  
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 6px;
     height: 6px;
-    background-color: white;
-    left: 0;
+    background-color: transparent;
+    right: -5px;
+    bottom: 50%;
     border-radius: 50%;
-    outline: 3px solid #8273af;
+    outline: 3px solid ${({ theme }) => theme.accent};
   }
 `;

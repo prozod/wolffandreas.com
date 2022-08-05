@@ -5,27 +5,30 @@ import {
   FPostBody,
   FPostTitle,
   FPostDescription,
-} from "./FeaturedPostCard.styles";
-import { PostCategory } from "@/components/blog/card/card.styles";
-import Image from "next/image";
-import Link from "next/link";
-import { IArticle } from "@/interfaces/interfaces";
+} from './FeaturedPostCard.styles';
+import { PostCategory } from '@/components/blog/card/card.styles';
+import Image from 'next/image';
+import Link from 'next/link';
+import { IArticle } from '@/interfaces/interfaces';
 
 const FeaturedPostCard: React.FC<IArticle> = ({ article }) => {
   const { title, description, category, image, slug } = article;
   return (
     <FPostCard>
-      <FPostImg width="140px" height="150px">
+      <FPostImg width='120px' height='130px'>
         <Image
           src={image.url}
           alt={image.alternativeText || image.name}
-          layout="fill"
-          loading="lazy"
+          layout='fill'
+          loading='lazy'
         />
       </FPostImg>
       <FPostContent>
         <Link href={`/post/${slug}`} passHref>
-          <a aria-label={title || "Featured post"} aria-describedby={title.substr(0, 1)}>
+          <a
+            aria-label={title || 'Featured post'}
+            aria-describedby={title.substr(0, 1)}
+          >
             <FPostBody>
               <FPostTitle id={title.substr(0, 1)}>{title}</FPostTitle>
               <FPostDescription>{description}</FPostDescription>
@@ -41,4 +44,3 @@ const FeaturedPostCard: React.FC<IArticle> = ({ article }) => {
 };
 
 export default FeaturedPostCard;
-

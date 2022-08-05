@@ -1,51 +1,61 @@
-import { useState } from 'react'
-import Head from 'next/head'
-import Footer from "@/components/footer/footer"
-import Navigation from "@/components/navigation/navigation"
-import { MobileMTopWrapper, PageSubtitle, PageTitle, Wrapper100 } from "@/constants/basic.styles"
-import { Embed, EmbedsWrapper, MusicWrapper, StreamingPlatform, StreamingPlatformsWrapper } from '@/components/music/music.styles'
-import MobileNav from '@/components/navigation/mobilenav'
-import MobileMenuIcon from '@/components/navigation/mobileMenuIcon'
+import Head from 'next/head';
+import Footer from '@/components/footer/footer';
+import {
+  MobileMTopWrapper,
+  PageSubtitle,
+  PageTitle,
+} from '@/constants/basic.styles';
+import {
+  Embed,
+  EmbedsWrapper,
+  StreamingPlatform,
+  StreamingPlatformsWrapper,
+} from '@/components/music/music.styles';
 
 const Music = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
   return (
-    <Wrapper100 className="AppWrapper">
+    <>
       <Head>
         <title>Music | TOUX.io</title>
-        <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life, Music Production" />
+        <meta
+          name='description'
+          content='Personal portfolio, Frontend Development, Blogging, Tech & Life, Music Production'
+        />
       </Head>
-      <Navigation />
-      <MobileMenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />
-      {showMenu && <MobileNav />}
       <MobileMTopWrapper>
         <PageTitle>Music by TOUX</PageTitle>
-        <PageSubtitle>I am a music producer aswell and I release music under the alias 'TOUX' (previously ERHARD).<br />
-          I don't have anything more recent (for now), but these are some of the songs I have produced and released publicly.<br />
-          Even though you can find my music on all digital streaming platforms, below are the links to the most popular ones.</PageSubtitle>
+        <PageSubtitle>
+          I am a music producer aswell and I release music under the alias
+          'TOUX' (previously ERHARD).
+          <br />
+          I don't have anything more recent (for now), but these are some of the
+          songs I have produced and released publicly.
+          <br />
+          Even though you can find my music on all digital streaming platforms,
+          below are the links to the most popular ones.
+        </PageSubtitle>
         <StreamingPlatformsWrapper>
           <StreamingPlatform
-            href="https://music.apple.com/us/artist/toux/id1529921638"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Apple Music"
+            href='https://music.apple.com/us/artist/toux/id1529921638'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='Apple Music'
           >
             <button>Apple Music</button>
           </StreamingPlatform>
           <StreamingPlatform
-            href="https://soundcloud.com/iamtoux"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Soundcloud"
+            href='https://soundcloud.com/iamtoux'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='Soundcloud'
           >
             <button>SoundCloud</button>
           </StreamingPlatform>
           <StreamingPlatform
-            href="https://open.spotify.com/artist/6D3fDmOnUCDNwYHHYtsW23?si=wIwTX53CQAeUFyhcuNWl-A&dl_branch=1"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Spotify"
+            href='https://open.spotify.com/artist/6D3fDmOnUCDNwYHHYtsW23?si=wIwTX53CQAeUFyhcuNWl-A&dl_branch=1'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='Spotify'
           >
             <button>Spotify</button>
           </StreamingPlatform>
@@ -53,46 +63,46 @@ const Music = () => {
 
         <EmbedsWrapper>
           <Embed>
-            <div className="sc-embed">
+            <div className='sc-embed'>
               <iframe
-                width="100%"
-                height="300"
-                scrolling="no"
-                frameBorder="no"
-                allow="autoplay"
-                title="soundcloud"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1294004104&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                width='100%'
+                height='300'
+                scrolling='no'
+                frameBorder='no'
+                allow='autoplay'
+                title='soundcloud'
+                src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1294004104&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
               ></iframe>
               <div
                 style={{
-                  fontSize: "10px",
-                  color: "#cccccc",
-                  lineBreak: "anywhere",
-                  wordBreak: "normal",
-                  overflow: "hidden",
-                  whiteSpace: "nowrap",
-                  textOverflow: "ellipsis",
+                  fontSize: '10px',
+                  color: '#cccccc',
+                  lineBreak: 'anywhere',
+                  wordBreak: 'normal',
+                  overflow: 'hidden',
+                  whiteSpace: 'nowrap',
+                  textOverflow: 'ellipsis',
                   fontFamily:
-                    "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+                    'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif',
                   fontWeight: 100,
                 }}
               >
                 <a
-                  href="https://soundcloud.com/iamtoux"
-                  title="TOUX"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "#cccccc", textDecoration: "none" }}
+                  href='https://soundcloud.com/iamtoux'
+                  title='TOUX'
+                  target='_blank'
+                  rel='noreferrer'
+                  style={{ color: '#cccccc', textDecoration: 'none' }}
                 >
                   TOUX
-                </a>{" "}
-                ·{" "}
+                </a>{' '}
+                ·{' '}
                 <a
-                  href="https://soundcloud.com/iamtoux/sets/toux-releases"
-                  title="TOUX Releases"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "#cccccc", textDecoration: "none" }}
+                  href='https://soundcloud.com/iamtoux/sets/toux-releases'
+                  title='TOUX Releases'
+                  target='_blank'
+                  rel='noreferrer'
+                  style={{ color: '#cccccc', textDecoration: 'none' }}
                 >
                   TOUX Releases
                 </a>
@@ -101,46 +111,46 @@ const Music = () => {
           </Embed>
 
           <Embed>
-            <div className="sc-embed">
+            <div className='sc-embed'>
               <iframe
-                width="100%"
-                height="300"
-                scrolling="no"
-                frameBorder="no"
-                allow="autoplay"
-                title="soundcloud"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/768248502&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                width='100%'
+                height='300'
+                scrolling='no'
+                frameBorder='no'
+                allow='autoplay'
+                title='soundcloud'
+                src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/768248502&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
               ></iframe>
               <div
                 style={{
-                  fontSize: "10px",
-                  color: "#cccccc",
-                  lineBreak: "anywhere",
-                  wordBreak: "normal",
-                  overflow: "hidden",
-                  whiteSpace: "nowrap",
-                  textOverflow: "ellipsis",
+                  fontSize: '10px',
+                  color: '#cccccc',
+                  lineBreak: 'anywhere',
+                  wordBreak: 'normal',
+                  overflow: 'hidden',
+                  whiteSpace: 'nowrap',
+                  textOverflow: 'ellipsis',
                   fontFamily:
-                    "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+                    'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif',
                   fontWeight: 100,
                 }}
               >
                 <a
-                  href="https://soundcloud.com/imerhard"
-                  title="ERHARD"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "#cccccc", textDecoration: "none" }}
+                  href='https://soundcloud.com/imerhard'
+                  title='ERHARD'
+                  target='_blank'
+                  rel='noreferrer'
+                  style={{ color: '#cccccc', textDecoration: 'none' }}
                 >
                   ERHARD
-                </a>{" "}
-                ·{" "}
+                </a>{' '}
+                ·{' '}
                 <a
-                  href="https://soundcloud.com/imerhard/sets/erhard-remixes"
-                  title="ERHARD Remixes"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "#cccccc", textDecoration: "none" }}
+                  href='https://soundcloud.com/imerhard/sets/erhard-remixes'
+                  title='ERHARD Remixes'
+                  target='_blank'
+                  rel='noreferrer'
+                  style={{ color: '#cccccc', textDecoration: 'none' }}
                 >
                   ERHARD Remixes
                 </a>
@@ -149,9 +159,8 @@ const Music = () => {
           </Embed>
         </EmbedsWrapper>
       </MobileMTopWrapper>
-      <Footer />
-    </Wrapper100>
-  )
-}
+    </>
+  );
+};
 
-export default Music
+export default Music;

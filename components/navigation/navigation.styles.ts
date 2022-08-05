@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -18,14 +18,11 @@ export const NavContainer = styled.nav`
 `;
 
 export const Anchor = styled.a`
-  color: white;
   text-decoration: none;
   transition: all 0.15s ease;
 
-  
-
   &:hover {
-    color: #a88ff2;
+    color: ${({ theme }) => theme.accent};
     cursor: pointer;
   }
 `;
@@ -38,15 +35,15 @@ export const NavItems = styled.ul`
 
 export const NavItem = styled.li`
   margin-right: 15px;
+  transition: all 0.15s ease;
 
-  [data-active="true"] {
-    color: #a88ff2;
+  [data-active='true'] {
+    color: ${({ theme }) => theme.accent};
   }
 `;
 
 export const NavIcons = styled.div`
   display: flex;
-  color: white;
 `;
 
 export const NavIcon = styled.span`

@@ -1,5 +1,4 @@
-import React from "react";
-import Link from "next/link";
+import React, { useContext, useState } from 'react';
 import {
   Wrapper,
   NavContainer,
@@ -8,12 +7,22 @@ import {
   NavIcons,
   NavIcon,
   Anchor,
-} from "./navigation.styles";
-import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
-import { NavigationLinks } from "@/constants/navigationlinks";
-import ActiveLink from "./activelink";
+} from './navigation.styles';
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaEnvelope,
+  FaMoon,
+  FaSun,
+} from 'react-icons/fa';
+import { NavigationLinks } from '@/constants/navigationlinks';
+import ActiveLink from './activelink';
+import { ThemeCtxType } from 'pages/_app';
 
-const Navigation = () => {
+const Navigation = ({ theme, setTheme }: ThemeCtxType) => {
+  const handleThemeChange = () =>
+    theme === 'dark' ? setTheme('light') : setTheme('dark');
+
   return (
     <Wrapper>
       <NavContainer>
@@ -31,18 +40,33 @@ const Navigation = () => {
 
         <NavIcons>
           <NavIcon>
-            <Anchor href="https://www.linkedin.com/in/andreaswolff96/" aria-label="LinkedIn Page" target="_blank" rel="noreferrer">
+            <Anchor
+              href='https://www.linkedin.com/in/andreaswolff96/'
+              aria-label='LinkedIn Page'
+              target='_blank'
+              rel='noreferrer'
+            >
               <FaLinkedinIn />
             </Anchor>
           </NavIcon>
           <NavIcon>
-            <Anchor href="https://www.github.com/andreastoux" aria-label="GitHub Page" target="_blank" rel="noreferrer">
+            <Anchor
+              href='https://www.github.com/andreastoux'
+              aria-label='GitHub Page'
+              target='_blank'
+              rel='noreferrer'
+            >
               <FaGithub />
             </Anchor>
           </NavIcon>
           <NavIcon>
-            <Anchor href="mailto: hello@toux.io" aria-label="Email">
+            <Anchor href='mailto: hello@toux.io' aria-label='Email'>
               <FaEnvelope />
+            </Anchor>
+          </NavIcon>
+          <NavIcon>
+            <Anchor aria-label='Change theme' onClick={handleThemeChange}>
+              {theme === 'dark' ? <FaSun /> : <FaMoon />}
             </Anchor>
           </NavIcon>
         </NavIcons>

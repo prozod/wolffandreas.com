@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StatsWrapper = styled.section`
   display: flex;
-  margin-top: 5em;
+  margin-top: 3em;
   margin-bottom: 3em;
+  flex-direction: column;
 
   @media (max-width: 1000px) {
     flex-direction: column;
@@ -16,10 +17,9 @@ export const StatsWrapper = styled.section`
 `;
 
 export const StatsTitle = styled.h1`
-  color: white;
-
+  font-size: 1.25rem;
   @media (max-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 `;
 
@@ -33,20 +33,19 @@ export const LiveStats = styled.div`
   }
 `;
 
+// background: #141414;
 export const LiveStatsContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0.5em 0;
   padding: 1em;
-  background: lightsalmon;
   border-radius: 10px;
-  background: #201b2f;
+  background: ${({ theme }) => theme.background};
 `;
 
 export const FeaturedPosts = styled.div`
   display: flex;
   flex: 2;
-  margin-right: 10px;
   flex-direction: column;
 
   @media (max-width: 1000px) {
@@ -56,17 +55,18 @@ export const FeaturedPosts = styled.div`
 
 export const CTALink = styled.a`
   text-decoration: none;
-  color: #9a9a9a;
+  color: ${({ theme }) => theme.text_secondary};
   margin: 0 auto;
   padding: 8px 12px;
   border-radius: 5px;
   font-size: 0.75rem;
   font-weight: 600;
   transition: all 0.2s ease;
+  margin-top: 5px;
 
   &:hover {
     cursor: pointer;
-    background: #201b2f;
-    color: #fff;
+    text-decoration: underline;
+    color: ${({ theme }) => theme.accent};
   }
 `;

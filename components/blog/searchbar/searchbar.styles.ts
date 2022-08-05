@@ -1,32 +1,30 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 1em 0;
-  background-color: #201b2f;
   border-radius: 5px;
+  border: 1px solid ${({ theme }) => theme.background};
 `;
 
 export const SearchInput = styled.input`
   width: 100%;
   padding: 1em 1em;
   border: none;
-  color: white;
   background-color: transparent;
 
   &:focus {
     outline: none;
-    outline: 4px solid #8273af;
+    outline: 3px solid ${({ theme }) => theme.accent};
     border: none;
-  }
-
-  &::placeholder {
-    color: #8273af;
   }
 `;
 
 export const SearchInputIcon = styled.span`
   height: 100%;
   padding: 1em 1em;
+  > svg {
+    color: ${({ theme }) => theme.accent};
+  }
 `;

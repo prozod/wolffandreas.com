@@ -1,23 +1,23 @@
 ///////////////////////////////////////////////
-// PERSONAL PROJECTS FROM STRAPI 
+// PERSONAL PROJECTS FROM STRAPI
 ///////////////////////////////////////////////
 
 export interface IProjectCard {
-  created_at?: any,
+  created_at?: any;
   project: {
-    title: string,
-    technologies: { tech: string[] },
-    image: { url: string },
-    description: string,
+    title: string;
+    technologies: { tech: string[] };
+    image: { url: string };
+    description: string;
     links: {
-      demo: string,
-      repo: string
-    }
-  }
+      demo: string;
+      repo: string;
+    };
+  };
 }
 
 export interface IProjects {
-  projects: IProjectCard[],
+  projects: IProjectCard[];
 }
 
 ///////////////////////////////////////////////
@@ -41,21 +41,21 @@ export interface IArticle {
 export interface IHomepage {
   aboutMe?: {
     aboutImages: {
-      name: string,
-      url: string
-    }[],
-    besidesthat: string,
-    inthefuture: string,
-    whatido: string
-  }
+      name: string;
+      url: string;
+    }[];
+    besidesthat: string;
+    inthefuture: string;
+    whatIdo: string;
+  };
   info?: {
-    about: string,
-    introline: string,
-    job: string,
+    about: string;
+    introline: string;
+    job: string;
     profilepicture: {
-      url: string,
-    }
-  }
+      url: string;
+    };
+  };
 }
 
 export interface IArticleArr extends scrobbleTrack {
@@ -132,25 +132,24 @@ export interface GlobalCtxProps {
 }
 
 ///////////////////////////////////////////////
-// SPOTIFY LIVE STATS INTERFACE 
+// SPOTIFY LIVE STATS INTERFACE
 ///////////////////////////////////////////////
 
 export interface scrobbleTrack {
   scrobble: {
     recenttracks: {
       track: {
-        "@attr": {
-          nowplaying: string
-        },
+        '@attr': {
+          nowplaying: string;
+        };
         artist: {
-          "#text": string
-        }
-        name: string
+          '#text': string;
+        };
+        name: string;
         attr: {
-          nowplaying: string
-        }
+          nowplaying: string;
+        };
       }[];
-    }
-  }
+    };
+  };
 }
-

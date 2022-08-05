@@ -1,9 +1,18 @@
-import { fetchAPI } from "@/lib/api";
-import Document, { Html, Head, DocumentInitialProps, DocumentContext, NextScript, Main } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import { fetchAPI } from '@/lib/api';
+import Document, {
+  Html,
+  Head,
+  DocumentInitialProps,
+  DocumentContext,
+  NextScript,
+  Main,
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -32,11 +41,31 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <meta name="author" content="Andreas Wolff" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" type="image/svg" href="https://res.cloudinary.com/andreastx/image/upload/v1638042422/txfavicon_b4673fa7ac.svg" />
-          <meta name="keywords" content="nextjs, react, frontend, developer, development, tech, blog, css, html, toux" />
-          <meta name="description" content="Personal portfolio, Frontend Development, Blogging, Tech & Life" />
+          <meta name='author' content='Andreas Wolff' />
+          <meta name='darkreader-lock' />
+          <link
+            rel='icon'
+            type='image/png'
+            href='https://res.cloudinary.com/andreastx/image/upload/v1659649824/favicon_zldufi.png'
+          />
+          <meta
+            name='keywords'
+            content='nextjs, react, frontend, developer, development, tech, blog, css, html, toux'
+          />
+          <meta
+            name='description'
+            content='Personal portfolio, Web Development, Blogging, Tech & Life'
+          />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
+            crossOrigin='true'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500&family=JetBrains+Mono:wght@500&family=Lato:wght@300;400;500;600;700&display=swap'
+            rel='stylesheet'
+          />
         </Head>
         <body>
           <Main />

@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MobileMTopWrapper = styled.div`
-@media (max-width: 768px) {
-  margin-top: 4.5em;
-}
-`
+  height: 100%;
+  @media (max-width: 768px) {
+    margin-top: 1.5em;
+  }
+`;
 
 export const Wrapper80 = styled.div`
   display: flex;
@@ -34,22 +35,22 @@ export const Wrapper100 = styled.div`
 
 export const Divider = styled.div`
   width: 100%;
-  height: 1px;
-  background-color: #6c6093;
+  height: 0.5px;
+  background-color: ${({ theme }) => theme.divider};
 `;
 
-
 export const PageTitle = styled.h1`
-  color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  color: ${({ theme }) => theme.text};
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 `;
 
 export const PageSubtitle = styled.p`
-  color: #a3a3a3;
+  color: ${({ theme }) => theme.text_secondary};
+  font-size: 0.9rem;
   margin-top: 0.5em;
 
   span {
@@ -58,5 +59,5 @@ export const PageSubtitle = styled.p`
 `;
 
 export const PageContent = styled.div`
-margin: 1em 0; 
-`
+  margin: 2em 0;
+`;
