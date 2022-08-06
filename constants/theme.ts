@@ -1,4 +1,6 @@
-export const lightTheme = {
+import { DefaultTheme } from 'styled-components';
+
+export const lightTheme: DefaultTheme = {
   body: '#fafafa',
   text: '#363537',
   text_secondary: '#71717a',
@@ -11,10 +13,10 @@ export const lightTheme = {
   divider: '#71717a',
   blogpostsubtitle: '#facc15',
 };
-export const darkTheme = {
+export const darkTheme: DefaultTheme = {
   body: '#18181b',
   text: '#FFF',
-  text_secondary: '#71717a',
+  text_secondary: '#8d8d94',
   accent: '#34d399',
   border: '#3f3f46',
   background: '#242429',

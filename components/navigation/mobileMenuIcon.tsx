@@ -1,32 +1,10 @@
 import styled from 'styled-components';
-import { FaGripLines, FaGripLinesVertical } from 'react-icons/fa';
 import React from 'react';
 
 interface IProps {
   showMenu: boolean;
   setShowMenu: (value: boolean | ((showMenu: boolean) => boolean)) => void;
 }
-
-export const IconWrapper = styled.div`
-  position: fixed;
-  background-color: ${({ theme }) => theme.accent};
-  height: auto;
-  padding: 0.5em;
-  left: 0;
-  bottom: 0;
-  margin: 1em;
-  border-radius: 50%;
-  border-right: 1px solid ${({ theme }) => theme.accent};
-  color: ${({ theme }) => theme.body};
-  transform: rotate(0deg);
-  transition: all 0.25s ease-in-out;
-
-  z-index: 99;
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
-`;
 
 export const AnimatedBtn = styled.div`
   display: none;
@@ -58,7 +36,7 @@ export const AnimatedBtn = styled.div`
     width: 24px;
     height: 3px;
     background: ${({ theme }) => theme.body};
-    transition: transform 0.25s 0.25s ease;
+    transition: transform 0.25s 0.15s ease;
   }
 
   &:after {
@@ -72,13 +50,13 @@ export const AnimatedBtn = styled.div`
     width: 24px;
     height: 3px;
     background: ${({ theme }) => theme.body};
-    transition: transform 0.25s 0.25s ease;
+    transition: transform 0.25s 0.15s ease;
   }
 
     & > .icon-left {
       width: 100%;
       height: 100%;
-      transition: all 0.5s ease;
+      transition: all 0.25s ease;
 
       &:before {
         position: absolute;
@@ -87,14 +65,14 @@ export const AnimatedBtn = styled.div`
         width: 24px;
         height: 3px;
         background: ${({ theme }) => theme.body};
-        transition: opacity 0.5s 0.5s ease;
+        transition: all 0.15s 0.15s ease;
       }
     }
 
     & > .icon-right {
       width: 100%;
       height: 100%;
-      transition: all 0.5s ease;
+      transition: all 0.25s ease;
 
       &:before {
         position: absolute;
@@ -103,11 +81,14 @@ export const AnimatedBtn = styled.div`
         width: 24px;
         height: 3px;
         background: ${({ theme }) => theme.body};
-        transition: opacity 0.5s 0.5s ease;
+        transition:  all 0.15s 0.15s ease;
       }
     }
 
     &.open {
+      transform: translateY(0);
+      visibility: visible;
+
       &:before {
         transform: rotate(45deg);
       }
@@ -116,10 +97,12 @@ export const AnimatedBtn = styled.div`
       }
 
       & > .icon-left:before {
+        top: 20px;
         opacity: 0;
         visibility: hidden;
       }
       & > .icon-right:before {
+        bottom: 20px;
         opacity: 0;
         visibility: hidden;
       }

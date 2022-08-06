@@ -1,4 +1,3 @@
-import React, { useContext, useState } from 'react';
 import {
   Wrapper,
   NavContainer,
@@ -7,6 +6,7 @@ import {
   NavIcons,
   NavIcon,
   Anchor,
+  ThemeBtn,
 } from './navigation.styles';
 import {
   FaLinkedinIn,
@@ -65,9 +65,9 @@ const Navigation = ({ theme, setTheme }: ThemeCtxType) => {
             </Anchor>
           </NavIcon>
           <NavIcon>
-            <Anchor aria-label='Change theme' onClick={handleThemeChange}>
-              {theme === 'dark' ? <FaSun /> : <FaMoon />}
-            </Anchor>
+            <ThemeBtn aria-label='Change theme' onClick={handleThemeChange}>
+              {theme === 'dark' ? <FaSun size={16} /> : <FaMoon size={16} />}
+            </ThemeBtn>
           </NavIcon>
         </NavIcons>
       </NavContainer>

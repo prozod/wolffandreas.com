@@ -16,7 +16,7 @@ const Music = () => {
   return (
     <>
       <Head>
-        <title>Music | TOUX.io</title>
+        <title>Music | Andreas Wolff</title>
         <meta
           name='description'
           content='Personal portfolio, Frontend Development, Blogging, Tech & Life, Music Production'

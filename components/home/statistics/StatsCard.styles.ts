@@ -70,7 +70,7 @@ export const SongName = styled.p`
   color: #a3a3a3;
 `;
 
-export const SongBars = styled.div`
+export const SongBars = styled.span`
   position: relative;
   width: 3px;
   background-color: ${({ theme }) => theme.text};

@@ -27,6 +27,20 @@ export const Anchor = styled.a`
   }
 `;
 
+export const ThemeBtn = styled.button`
+  transition: all 0.15s ease;
+  color: ${({ theme }) => theme.text};
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  &:hover {
+    color: ${({ theme }) => theme.accent};
+    cursor: pointer;
+  }
+`;
+
 export const NavItems = styled.ul`
   display: flex;
   list-style: none;

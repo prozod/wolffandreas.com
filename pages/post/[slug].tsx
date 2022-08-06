@@ -15,7 +15,7 @@ const Post: React.FC<IStrapi> = ({ articles, categories }) => {
   return (
     <>
       <Head>
-        <title>{articles.title} | TOUX.io</title>
+        <title>{articles.title} | Andreas Wolff</title>
         <meta name='description' content={articles.content} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>

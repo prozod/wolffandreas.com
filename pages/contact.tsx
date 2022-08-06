@@ -44,7 +44,7 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Contact | TOUX.io</title>
+        <title>Contact | Andreas Wolff</title>
         <meta
           name='description'
           content='Personal portfolio, Frontend Development, Blogging, Tech & Life, Music Production'

@@ -8,7 +8,7 @@ const Home: React.FC<IArticleArr> = ({ homepage, scrobble, articles }) => {
   return (
     <>
       <Head>
-        <title>TOUX.io | Developer, blogger, tech enthusiast</title>
+        <title>Andreas Wolff | Developer, blogger, tech enthusiast</title>
         <meta
           name='description'
           content='Personal portfolio, Frontend Development, Blogging, Tech & Life'

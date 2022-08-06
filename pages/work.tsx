@@ -6,7 +6,6 @@ import {
   PageContent,
   PageSubtitle,
   PageTitle,
-  Divider,
 } from '../constants/basic.styles';
 import { IProjects } from '@/interfaces/interfaces';
 
@@ -18,7 +17,7 @@ const Work: React.FC<IProjects> = ({ projects }) => {
   return (
     <>
       <Head>
-        <title>My work | TOUX.io</title>
+        <title>My work | Andreas Wolff</title>
         <meta
           name='description'
           content='Personal portfolio, Frontend Development, Blogging, Tech & Life'
@@ -29,7 +28,7 @@ const Work: React.FC<IProjects> = ({ projects }) => {
         <PageSubtitle>
           Showcase to some of the things I have worked on and built.
           <br />
-          Currently working on: <span>WebRTC Screen-sharing platform</span>
+          Currently working on: <span>Linkeep | A bookmark storage app</span>
         </PageSubtitle>
         <PageContent>
           {sortedProjects.map((proj: any, idx: number) => (

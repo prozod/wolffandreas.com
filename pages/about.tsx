@@ -35,12 +35,11 @@ const About: React.FC<IProps> = ({ info, weeklyTracks }) => {
   const aboutImages = info.aboutMe!.aboutImages.map(
     (img: { url: string }) => img.url
   );
-  console.log(info.aboutMe?.besidesthat.split('*'));
 
   return (
     <>
       <Head>
-        <title>Who am I? | TOUX.io</title>
+        <title>Who am I? | Andreas Wolff</title>
         <meta
           name='description'
           content='Personal portfolio, Frontend Development, Blogging, Tech & Life'

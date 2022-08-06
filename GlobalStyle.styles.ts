@@ -1,8 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700&display=swap');
-//   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
-//   @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500&display=swap');
 export const GlobalStyle = createGlobalStyle`
 *, *:before, *:after, html {
   box-sizing: border-box;
@@ -37,7 +34,7 @@ a {
 .open {
   transform: translateY(0);
   visibility: visible;
-  }
+}
 
 .hamburgerMenuTap {
   transform: rotate(-90deg);

@@ -1,6 +1,6 @@
 
-## TOUX.io | Personal portfolio
-Open the [LIVE version](https://toux.io) with your browser to see the result.
+## Andreas Wolff | Personal portfolio
+Open the [LIVE version](https://wolffandreas.com) with your browser to see the result.
 
 ### Project Info
 This was built using 
