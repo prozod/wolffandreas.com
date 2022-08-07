@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 export const lightTheme: DefaultTheme = {
   body: '#fafafa',
+  body2: '#e2e2e2',
   text: '#363537',
   text_secondary: '#71717a',
   accent: '#4f46e5',
@@ -15,6 +16,7 @@ export const lightTheme: DefaultTheme = {
 };
 export const darkTheme: DefaultTheme = {
   body: '#18181b',
+  body2: '#212125',
   text: '#FFF',
   text_secondary: '#8d8d94',
   accent: '#34d399',

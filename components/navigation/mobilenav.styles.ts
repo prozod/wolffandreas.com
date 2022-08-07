@@ -33,7 +33,7 @@ export const MobileMenuWrapper = styled.nav.attrs((props) => ({
   }
 `;
 
-export const MobileNavItem = styled.a`
+export const MobileNavItem = styled.span`
   color: ${({ theme }) => theme.text};
   font-family: 'Inter', sans-serif;
   text-decoration: none;

@@ -12,7 +12,7 @@ const Footer = () => {
     <FooterWrapper>
       <FooterLinks>
         <FooterItem>
-          <a href='https://github.com/andreastoux'>GitHub</a>
+          <a href='https://github.com/t0ux'>GitHub</a>
         </FooterItem>
 
         <FooterItem>

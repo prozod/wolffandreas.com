@@ -1,12 +1,14 @@
 import { NavigationLinks } from '@/constants/navigationlinks';
 import Link from 'next/link';
 import { HTMLAttributes } from 'react';
+import ActiveLink from './activelink';
 import { MobileMenuWrapper, MobileNavItem } from './mobilenav.styles';
+import { Anchor } from './navigation.styles';
 
 interface IProps {
   isOpen: boolean;
   setIsOpen: (value: boolean | ((showMenu: boolean) => boolean)) => void;
-  theme: 'light' | 'dark';
+  theme: 'light' | 'dark' | null;
   setTheme: (theme: 'light' | 'dark') => void;
 }
 
@@ -18,11 +20,11 @@ const MobileNav = ({ isOpen, setIsOpen, theme, setTheme }: IProps) => {
     <MobileMenuWrapper className={isOpen ? 'open' : ''}>
       {NavigationLinks.map((item, idx) => {
         return (
-          <Link key={idx} href={item.path}>
-            <MobileNavItem onClick={() => setIsOpen(false)}>
-              {item.title}
-            </MobileNavItem>
-          </Link>
+          <MobileNavItem onClick={() => setIsOpen(false)} key={idx}>
+            <ActiveLink href={item.path} passHref>
+              <Anchor>{item.title}</Anchor>
+            </ActiveLink>
+          </MobileNavItem>
         );
       })}
       <MobileNavItem aria-label='Change theme' onClick={handleThemeChange}>

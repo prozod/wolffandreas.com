@@ -96,11 +96,7 @@ const Contact = () => {
               </SocialIcon>
               LinkedIn
             </a>
-            <a
-              href='https://github.com/andreastoux'
-              target='_blank'
-              rel='noreferrer'
-            >
+            <a href='https://github.com/t0ux' target='_blank' rel='noreferrer'>
               <SocialIcon>
                 <FaGithub size={20} />
               </SocialIcon>

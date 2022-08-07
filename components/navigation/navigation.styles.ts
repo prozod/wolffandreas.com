@@ -20,6 +20,7 @@ export const NavContainer = styled.nav`
 export const Anchor = styled.a`
   text-decoration: none;
   transition: all 0.15s ease;
+  color: ${({ theme }) => theme.text};
 
   &:hover {
     color: ${({ theme }) => theme.accent};

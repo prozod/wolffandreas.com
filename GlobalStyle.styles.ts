@@ -10,20 +10,21 @@ export const GlobalStyle = createGlobalStyle`
 
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0 auto;
-  background-color: ${({ theme }) => theme.body};
-  color: ${({ theme }) => theme.text};
-  font-family: 'Lato', sans-serif;
+  position: relative;
   display: flex;
   flex-direction: column;
   flex: 1;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  color: ${({ theme }) => theme.text};
+  font-family: 'Lato', sans-serif;
   transition: all 0.5s linear;
-    
-    // @media (max-width: 768px) {
-    // width: 90%;
-    // }
+  background: linear-gradient(${({ theme }) => theme.body} 25%, ${({ theme }) =>
+  theme.body2} 100%, ${({ theme }) => theme.body2} 20%, ${({ theme }) =>
+  theme.body}  100%);    
+overflow-x: hidden;
 }
 
 a {

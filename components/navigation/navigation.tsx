@@ -20,8 +20,13 @@ import ActiveLink from './activelink';
 import { ThemeCtxType } from 'pages/_app';
 
 const Navigation = ({ theme, setTheme }: ThemeCtxType) => {
-  const handleThemeChange = () =>
+  const handleThemeChange = () => {
+    localStorage.setItem(
+      'theme-preference',
+      theme === 'dark' ? 'light' : 'dark'
+    );
     theme === 'dark' ? setTheme('light') : setTheme('dark');
+  };
 
   return (
     <Wrapper>
@@ -51,7 +56,7 @@ const Navigation = ({ theme, setTheme }: ThemeCtxType) => {
           </NavIcon>
           <NavIcon>
             <Anchor
-              href='https://www.github.com/andreastoux'
+              href='https://www.github.com/t0ux'
               aria-label='GitHub Page'
               target='_blank'
               rel='noreferrer'
