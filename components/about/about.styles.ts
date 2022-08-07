@@ -24,6 +24,7 @@ export const BannerImage = styled.div`
   img {
     border-radius: 10px;
     z-index: 0;
+    object-position: center;
   }
 `;
 
@@ -96,21 +97,15 @@ export const CTAWrapper = styled.div`
   z-index: 2;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 export const CTATitle = styled.h1`
   color: #110e1b;
-  font-size: 3rem;
+  font-size: 2rem;
   z-index: 2;
-  @media (max-width: 768px) {
-    margin-bottom: 0.5em;
-    font-size: 2rem;
-  }
+  margin-bottom: 0.5em;
 `;
 
 export const CTAButton = styled.button`
@@ -120,7 +115,7 @@ export const CTAButton = styled.button`
   width: fit-content;
   border-radius: 5px;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 16px 32px;
   font-weight: 600;
   transition: all 0.2s ease;

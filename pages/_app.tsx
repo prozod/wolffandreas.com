@@ -27,10 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <Head>
         <title>Andreas Wolff</title>
-        <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1.0, maximum-scale=5.0'
-        />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta
           name='description'
           content='Personal portfolio, Web Development, Blogging, Tech & Life'

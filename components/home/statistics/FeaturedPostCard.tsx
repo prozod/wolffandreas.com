@@ -15,7 +15,7 @@ const FeaturedPostCard: React.FC<IArticle> = ({ article }) => {
   const { title, description, category, image, slug } = article;
   return (
     <FPostCard>
-      <FPostImg width='120px' height='130px'>
+      <FPostImg width='120px'>
         <Image
           src={image.url}
           alt={image.alternativeText || image.name}

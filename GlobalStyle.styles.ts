@@ -31,16 +31,6 @@ a {
   text-decoration: none;
 }
 
-.open {
-  transform: translateY(0);
-  visibility: visible;
-}
-
-.hamburgerMenuTap {
-  transform: rotate(-90deg);
-}
-
-
 .AppWrapper {
     width: 40%;
     margin: 0 auto;

@@ -1,7 +1,10 @@
+import { HTMLAttributes } from 'react';
 import styled from 'styled-components';
 
 // transform: translateY(100%) translateX(-100%) scale(0.9);
-export const MobileMenuWrapper = styled.nav`
+export const MobileMenuWrapper = styled.nav.attrs((props) => ({
+  className: props.className as HTMLAttributes<Element>,
+}))`
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +25,11 @@ export const MobileMenuWrapper = styled.nav`
 
   @media (max-width: 768px) {
     display: flex;
+  }
+
+  &.open {
+    visibility: visible;
+    transform: translateY(0);
   }
 `;
 

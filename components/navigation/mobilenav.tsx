@@ -1,8 +1,7 @@
 import { NavigationLinks } from '@/constants/navigationlinks';
 import Link from 'next/link';
+import { HTMLAttributes } from 'react';
 import { MobileMenuWrapper, MobileNavItem } from './mobilenav.styles';
-import { NavIcon, Anchor } from './navigation.styles';
-import { ThemeCtxType } from 'pages/_app';
 
 interface IProps {
   isOpen: boolean;
@@ -14,6 +13,7 @@ interface IProps {
 const MobileNav = ({ isOpen, setIsOpen, theme, setTheme }: IProps) => {
   const handleThemeChange = () =>
     theme === 'dark' ? setTheme('light') : setTheme('dark');
+
   return (
     <MobileMenuWrapper className={isOpen ? 'open' : ''}>
       {NavigationLinks.map((item, idx) => {

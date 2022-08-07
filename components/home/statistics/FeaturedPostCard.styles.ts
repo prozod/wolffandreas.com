@@ -21,7 +21,7 @@ export const FPostCard = styled.div`
 
   @media (max-width: 768px) {
     max-height: auto;
-    height: 160px;
+    height: auto;
   }
 `;
 
@@ -42,13 +42,14 @@ export const FPostContent = styled.div`
   }
 `;
 
+// height: ${(p: IPostImage) => (p.height ? p.height : '140px')};
 export const FPostImg = styled.div`
   margin: 0;
   min-width: 100px;
   min-height: 120px;
   border-radius: 10px 0 0 10px;
   position: relative;
-  height: ${(p: IPostImage) => (p.height ? p.height : '140px')};
+  height: auto;
   width: ${(p: IPostImage) => (p.width ? p.width : '100px')};
 
   img {

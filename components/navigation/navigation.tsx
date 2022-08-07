@@ -60,7 +60,7 @@ const Navigation = ({ theme, setTheme }: ThemeCtxType) => {
             </Anchor>
           </NavIcon>
           <NavIcon>
-            <Anchor href='mailto: hello@toux.io' aria-label='Email'>
+            <Anchor href='mailto: contact@wolffandreas.com' aria-label='Email'>
               <FaEnvelope />
             </Anchor>
           </NavIcon>

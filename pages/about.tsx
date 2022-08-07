@@ -129,8 +129,8 @@ const About: React.FC<IProps> = ({ info, weeklyTracks }) => {
         <BannerImage height='200px' padding='4em 0'>
           <CTAWrapper>
             <CTATitle>Let's work!</CTATitle>
-            <a href='mailto: hello@toux.io' aria-label='Email'>
-              <CTAButton role='button'>hello@toux.io</CTAButton>
+            <a href='mailto: contact@wolffandreas.com' aria-label='Email'>
+              <CTAButton role='button'>contact@wolffandreas.com</CTAButton>
             </a>
           </CTAWrapper>
           <Image
